@@ -40,6 +40,11 @@ const setLocale: typeof setNuxti18nLocale = newLocale => {
   settings.value.selectedLocale = newLocale
   return setNuxti18nLocale(newLocale)
 }
+
+function handleLocaleChange(newLocale?: string) {
+  if (!newLocale) return
+  setLocale(newLocale)
+}
 </script>
 
 <template>
@@ -244,8 +249,8 @@ const setLocale: typeof setNuxti18nLocale = newLocale => {
                 <SelectField
                   id="language-select"
                   :items="locales.map(loc => ({ label: loc.name ?? '', value: loc.code }))"
-                  v-model="currentLocale"
-                  @update:modelValue="setLocale($event as typeof currentLocale)"
+                  :modelValue="currentLocale"
+                  @update:modelValue="handleLocaleChange"
                   block
                   size="sm"
                   class="max-w-48"
