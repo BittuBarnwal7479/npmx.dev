@@ -32,7 +32,7 @@ const desktopLinks = computed<NavigationConfig>(() => [
     name: 'Settings',
     label: $t('nav.settings'),
     to: { name: 'settings' },
-    keyshortcut: 's',
+    keyshortcut: ',',
     type: 'link',
     external: false,
     iconClass: 'i-lucide:settings',
@@ -201,8 +201,8 @@ function handleSearchFocus() {
 }
 
 useShortcuts({
-  c: () => ({ name: 'compare' }),
-  s: () => ({ name: 'settings' }),
+  'c': () => ({ name: 'compare' }),
+  ',': () => ({ name: 'settings' }),
 })
 </script>
 
@@ -316,7 +316,7 @@ useShortcuts({
           class="border-none"
           variant="button-secondary"
           :to="link.to"
-          :classicon="link.iconClass"
+          :aria-keyshortcuts="link.keyshortcut"
         >
           {{ link.label }}
         </LinkBase>
