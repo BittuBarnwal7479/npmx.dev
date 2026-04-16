@@ -282,30 +282,30 @@ test.describe('Keyboard Shortcuts', () => {
     await expect(page).toHaveURL(/\/vue/)
   })
 
-  test('"," navigates to /settings', async ({ page, goto }) => {
+  test('"s" navigates to /settings', async ({ page, goto }) => {
     await goto('/compare', { waitUntil: 'hydration' })
 
-    await page.keyboard.press(',')
+    await page.keyboard.press('s')
 
     await expect(page).toHaveURL(/\/settings/)
   })
 
-  test('"," does not navigate when any modifier key is pressed', async ({ page, goto }) => {
+  test('"s" does not navigate when any modifier key is pressed', async ({ page, goto }) => {
     await goto('/settings', { waitUntil: 'hydration' })
 
     const searchInput = page.locator('#header-search')
     await searchInput.focus()
     await expect(searchInput).toBeFocused()
 
-    await page.keyboard.press('Shift+,')
+    await page.keyboard.press('Shift+s')
     await expect(page).toHaveURL(/\/settings/)
-    await page.keyboard.press('Control+,')
+    await page.keyboard.press('Control+s')
     await expect(page).toHaveURL(/\/settings/)
-    await page.keyboard.press('Alt+,')
+    await page.keyboard.press('Alt+s')
     await expect(page).toHaveURL(/\/settings/)
-    await page.keyboard.press('Meta+,')
+    await page.keyboard.press('Meta+s')
     await expect(page).toHaveURL(/\/settings/)
-    await page.keyboard.press('ControlOrMeta+Shift+,')
+    await page.keyboard.press('ControlOrMeta+Shift+s')
     await expect(page).toHaveURL(/\/settings/)
   })
 })
@@ -317,13 +317,13 @@ test.describe('Keyboard Shortcuts disabled', () => {
     })
   })
 
-  test('"," (header) does not navigate to /settings when shortcuts are disabled', async ({
+  test('"s" (header) does not navigate to /settings when shortcuts are disabled', async ({
     page,
     goto,
   }) => {
     await goto('/compare', { waitUntil: 'hydration' })
 
-    await page.keyboard.press(',')
+    await page.keyboard.press('s')
 
     await expect(page).toHaveURL(/\/compare/)
   })
