@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { LocaleObject } from '@nuxtjs/i18n'
+
 const router = useRouter()
 const { settings } = useSettings()
 const { locale, locales, setLocale: setNuxti18nLocale } = useI18n()
@@ -8,13 +10,21 @@ const keyboardShortcutsEnabled = useKeyboardShortcuts()
 const { toggleCodeLigatures } = useCodeLigatures()
 
 // Create a computed property to handle locale binding properly
+const localeCodes = computed<LocaleObject['code'][]>(() =>
+  locales.value.map(loc => loc.code as LocaleObject['code']),
+)
+
+function isLocaleCode(value: string): value is LocaleObject['code'] {
+  return localeCodes.value.includes(value as LocaleObject['code'])
+}
+
 const currentLocale = computed<string>({
   get: () => locale.value as string,
   set: (newLocale: string) => {
-    if (newLocale) {
-      settings.value.selectedLocale = newLocale as any
-      setNuxti18nLocale(newLocale as any)
-    }
+    if (!newLocale || !isLocaleCode(newLocale)) return
+
+    settings.value.selectedLocale = newLocale
+    setNuxti18nLocale(newLocale)
   },
 })
 
@@ -41,11 +51,7 @@ useSeoMeta({
   twitterDescription: () => $t('settings.meta_description'),
 })
 
-defineOgImageComponent('Default', {
-  title: () => $t('settings.title'),
-  description: () => $t('settings.tagline'),
-  primaryColor: '#60a5fa',
-})
+
 </script>
 
 <template>
