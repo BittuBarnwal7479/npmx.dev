@@ -50,8 +50,6 @@ useSeoMeta({
   ogDescription: () => $t('settings.meta_description'),
   twitterDescription: () => $t('settings.meta_description'),
 })
-
-
 </script>
 
 <template>
