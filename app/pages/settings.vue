@@ -1,11 +1,22 @@
 <script setup lang="ts">
 const router = useRouter()
 const { settings } = useSettings()
-const { locale: currentLocale, locales, setLocale: setNuxti18nLocale } = useI18n()
+const { locale, locales, setLocale: setNuxti18nLocale } = useI18n()
 const colorMode = useColorMode()
 const { currentLocaleStatus, isSourceLocale } = useI18nStatus()
 const keyboardShortcutsEnabled = useKeyboardShortcuts()
 const { toggleCodeLigatures } = useCodeLigatures()
+
+// Create a computed property to handle locale binding properly
+const currentLocale = computed<string>({
+  get: () => locale.value as string,
+  set: (newLocale: string) => {
+    if (newLocale) {
+      settings.value.selectedLocale = newLocale as any
+      setNuxti18nLocale(newLocale as any)
+    }
+  },
+})
 
 // Escape to go back (but not when focused on form elements or modal is open)
 onKeyStroke(
@@ -35,16 +46,6 @@ defineOgImageComponent('Default', {
   description: () => $t('settings.tagline'),
   primaryColor: '#60a5fa',
 })
-
-const setLocale: typeof setNuxti18nLocale = newLocale => {
-  settings.value.selectedLocale = newLocale
-  return setNuxti18nLocale(newLocale)
-}
-
-function handleLocaleChange(newLocale?: string) {
-  if (!newLocale) return
-  setLocale(newLocale)
-}
 </script>
 
 <template>
@@ -249,8 +250,7 @@ function handleLocaleChange(newLocale?: string) {
                 <SelectField
                   id="language-select"
                   :items="locales.map(loc => ({ label: loc.name ?? '', value: loc.code }))"
-                  :modelValue="currentLocale"
-                  @update:modelValue="handleLocaleChange"
+                  v-model="currentLocale"
                   block
                   size="sm"
                   class="max-w-48"
