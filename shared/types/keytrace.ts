@@ -1,50 +1,40 @@
 export type KeytraceProfile = {
-  name: string;
-  avatar: string;
-  banner?: string;
-  description: string;
-};
+  name: string
+  avatar: string
+  banner?: string
+  description: string
+}
 
-export type KeytraceVerificationStatus =
-  | "verified"
-  | "unverified"
-  | "stale"
-  | "failed";
+export type KeytraceVerificationStatus = 'verified' | 'unverified' | 'stale' | 'failed'
 
-export type KeytraceProofMethod =
-  | "dns"
-  | "github"
-  | "npm"
-  | "mastodon"
-  | "pgp"
-  | "other";
+export type KeytraceProofMethod = 'dns' | 'github' | 'npm' | 'mastodon' | 'pgp' | 'other'
 
 export type KeytraceAccount = {
-  platform: string;
-  username: string;
-  displayName?: string;
-  avatar?: string;
-  url?: string;
-  status: KeytraceVerificationStatus;
-  proofMethod: KeytraceProofMethod;
-  addedAt: string;
-  lastCheckedAt: string;
-  failureReason?: string;
-};
+  platform: string
+  username: string
+  displayName?: string
+  avatar?: string
+  url?: string
+  status: KeytraceVerificationStatus
+  proofMethod: KeytraceProofMethod
+  addedAt: string
+  lastCheckedAt: string
+  failureReason?: string
+}
 
 export type KeytraceResponse = {
-  profile: KeytraceProfile;
-  accounts: KeytraceAccount[];
-};
+  profile: KeytraceProfile
+  accounts: KeytraceAccount[]
+}
 
 export type KeytraceReverifyRequest = {
-  platform: string;
-  username: string;
-  url?: string;
-};
+  platform: string
+  username: string
+  url?: string
+}
 
 export type KeytraceReverifyResponse = {
-  status: KeytraceVerificationStatus;
-  lastCheckedAt: string;
-  failureReason?: string;
-};
+  status: KeytraceVerificationStatus
+  lastCheckedAt: string
+  failureReason?: string
+}

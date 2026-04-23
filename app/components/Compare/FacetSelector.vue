@@ -106,7 +106,11 @@ function deselectAllFacet(category: string) {
           :key="facet.id"
           :title="facet.comingSoon ? $t('compare.facets.coming_soon') : facet.description"
           class="inline-flex items-center gap-1 px-1.5 rounded border transition-colors text-fg-subtle bg-bg-subtle border-border-subtle hover:(text-fg-muted border-border) has-[:checked]:(text-fg-muted bg-fg/10 border-fg/20 hover:(bg-fg/20 text-fg/50)) has-[:focus-visible]:(outline outline-accent/70)"
-          :class="facet.comingSoon ? 'cursor-not-allowed text-fg-subtle/50 bg-bg-subtle border-border-subtle hover:(text-fg-subtle/50 border-border-subtle)' : 'cursor-pointer'"
+          :class="
+            facet.comingSoon
+              ? 'cursor-not-allowed text-fg-subtle/50 bg-bg-subtle border-border-subtle hover:(text-fg-subtle/50 border-border-subtle)'
+              : 'cursor-pointer'
+          "
         >
           <input
             type="checkbox"
