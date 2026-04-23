@@ -241,7 +241,11 @@ defineOgImage(
 
     <section class="mb-8 space-y-4">
       <ProfileHeader :profile="keytraceProfile" :loading="keytraceLoading" />
-      <LinkedAccounts :accounts="keytraceAccounts" :loading="keytraceLoading" />
+      <LinkedAccounts
+        :identity="identity"
+        :accounts="keytraceAccounts"
+        :loading="keytraceLoading"
+      />
     </section>
 
     <section class="flex flex-col gap-8">

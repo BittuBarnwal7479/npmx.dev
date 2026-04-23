@@ -7,6 +7,7 @@ import type {
 } from '#shared/types/keytrace'
 
 const props = defineProps<{
+  identity: string
   account: KeytraceAccount
 }>()
 
@@ -157,6 +158,7 @@ async function reverifyAccount() {
 
   try {
     const body: KeytraceReverifyRequest = {
+      identity: props.identity,
       platform: props.account.platform,
       username: props.account.username,
       url: props.account.url,

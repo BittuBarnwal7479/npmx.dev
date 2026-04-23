@@ -23,6 +23,7 @@ const statusLegend = computed(() => [
 ])
 
 const props = defineProps<{
+  identity: string
   accounts: KeytraceAccount[]
   loading?: boolean
 }>()
@@ -72,7 +73,7 @@ const verifiedCount = computed(
 
     <ul v-else class="mt-4 space-y-2">
       <li v-for="account in accounts" :key="`${account.platform}-${account.username}`">
-        <AccountItem :account="account" />
+        <AccountItem :account="account" :identity="identity" />
       </li>
     </ul>
   </section>

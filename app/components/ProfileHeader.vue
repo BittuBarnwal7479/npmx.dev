@@ -38,6 +38,17 @@ function onAvatarError() {
 
 <template>
   <section class="bg-bg-subtle border border-border rounded-lg p-4 sm:p-6">
+    <div
+      v-if="!loading && profile?.banner"
+      class="-m-4 sm:-m-6 mb-4 sm:mb-6 h-28 sm:h-36 overflow-hidden rounded-t-lg border-b border-border"
+    >
+      <img
+        :src="profile.banner"
+        :alt="profile.name || $t('profile.unknown_profile')"
+        class="h-full w-full object-cover"
+      />
+    </div>
+
     <div v-if="loading" class="flex items-center gap-4">
       <SkeletonBlock class="h-16 w-16 rounded-full" />
       <div class="flex-1 space-y-2">
