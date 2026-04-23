@@ -3,6 +3,20 @@
   "profile": {
     "public_interests_description": "Öffentliche Paketinteressen und Aktivitätssignale.",
     "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
-    "likes_empty": "Noch keine gelikten Pakete."
+    "likes_empty": "Noch keine gelikten Pakete.",
+    "avatar_alt": "Profilavatar",
+    "unknown_profile": "Unbekanntes Profil",
+    "linked_accounts": {
+      "status": {
+        "verified": "Verifiziert",
+        "unverified": "Nicht verifiziert",
+        "stale": "Veraltet",
+        "failed": "Fehlgeschlagen"
+      },
+      "title": "Verknüpfte Konten",
+      "verified_summary": "Verifizierte Konten",
+      "legend_aria_label": "Legende zum Verifizierungsstatus von Konten",
+      "empty": "Keine verknüpften Konten"
+    }
   }
 }

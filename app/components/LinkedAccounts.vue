@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { KeytraceAccount } from '#shared/types/keytrace'
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
