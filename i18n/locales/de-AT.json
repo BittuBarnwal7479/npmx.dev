@@ -24,7 +24,7 @@
   },
   "profile": {
     "public_interests_description": "Öffentliche Paketinteressen und Aktivitätssignale.",
-    "likes_error": "Beliebte Pakete konnten nicht geladen werden.",
-    "likes_empty": "Noch keine beliebten Pakete vorhanden."
+    "likes_error": "Mit „Gefällt mir" markierte Pakete konnten nicht geladen werden.",
+    "likes_empty": "Noch keine mit „Gefällt mir" markierten Pakete."
   }
 }
