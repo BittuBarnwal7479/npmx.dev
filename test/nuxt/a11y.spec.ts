@@ -271,6 +271,9 @@ import FacetScatterChart from '~/components/Compare/FacetScatterChart.vue'
 import PackageLikeCard from '~/components/Package/LikeCard.vue'
 import SizeIncrease from '~/components/Package/SizeIncrease.vue'
 import Likes from '~/components/Package/Likes.vue'
+import AccountItem from '~/components/AccountItem.vue'
+import LinkedAccounts from '~/components/LinkedAccounts.vue'
+import ProfileHeader from '~/components/ProfileHeader.vue'
 import type { VueUiXyDatasetItem } from 'vue-data-ui'
 
 describe('component accessibility audits', () => {
@@ -898,6 +901,66 @@ describe('component accessibility audits', () => {
     it('should have no accessibility violations', async () => {
       const component = await mountSuspended(PackageLikeCard, {
         props: { packageUrl: 'https://npmx.dev/package/vue' },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('ProfileHeader', () => {
+    it('should have no accessibility violations with profile data', async () => {
+      const component = await mountSuspended(ProfileHeader, {
+        props: {
+          profile: {
+            name: 'npmx Team',
+            avatar: 'https://api.dicebear.com/9.x/shapes/svg?seed=npmx',
+            description: 'Open source maintainers',
+          },
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('LinkedAccounts', () => {
+    it('should have no accessibility violations with account list', async () => {
+      const component = await mountSuspended(LinkedAccounts, {
+        props: {
+          accounts: [
+            {
+              platform: 'github',
+              username: 'npmx-dev',
+              displayName: 'npmx-dev',
+              status: 'verified',
+              proofMethod: 'github',
+              addedAt: '2026-04-01T10:00:00.000Z',
+              lastCheckedAt: '2026-04-21T10:00:00.000Z',
+              url: 'https://github.com/npmx-dev',
+            },
+          ],
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('AccountItem', () => {
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(AccountItem, {
+        props: {
+          account: {
+            platform: 'github',
+            username: 'npmx-dev',
+            displayName: 'npmx-dev',
+            status: 'verified',
+            proofMethod: 'github',
+            addedAt: '2026-04-01T10:00:00.000Z',
+            lastCheckedAt: '2026-04-21T10:00:00.000Z',
+            url: 'https://github.com/npmx-dev',
+          },
+        },
       })
       const results = await runAxe(component)
       expect(results.violations).toEqual([])
