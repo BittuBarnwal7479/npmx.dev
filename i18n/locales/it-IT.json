@@ -155,7 +155,10 @@
     }
   },
   "profile": {
-    "invite": {}
+    "invite": {},
+    "public_interests_description": "Interessi dei pacchetti pubblici e segnali di attività.",
+    "likes_error": "Impossibile caricare i pacchetti preferiti.",
+    "likes_empty": "Nessun pacchetto preferito ancora."
   },
   "package": {
     "not_found": "Pacchetto Non Trovato",

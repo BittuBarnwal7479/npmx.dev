@@ -1069,6 +1069,15 @@
         "likes": {
           "type": "string"
         },
+        "likes_error": {
+          "type": "string"
+        },
+        "likes_empty": {
+          "type": "string"
+        },
+        "public_interests_description": {
+          "type": "string"
+        },
         "seo_title": {
           "type": "string"
         },

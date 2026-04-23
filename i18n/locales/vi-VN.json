@@ -244,7 +244,10 @@
       "message": "Có vẻ họ chưa dùng npmx. Bạn có muốn giới thiệu cho họ không?",
       "share_button": "Chia sẻ trên Bluesky",
       "compose_text": "Chào {'@'}{handle}! Bạn đã thử npmx.dev chưa? Đây là trình duyệt cho npm registry, nhanh, hiện đại và mã nguồn mở.\nhttps://npmx.dev"
-    }
+    },
+    "public_interests_description": "Sở thích package công khai và tín hiệu hoạt động.",
+    "likes_error": "Không thể tải các package đã thích.",
+    "likes_empty": "Chưa có package nào được thích."
   },
   "package": {
     "not_found": "Không tìm thấy gói",

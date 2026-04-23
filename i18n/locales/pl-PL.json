@@ -224,7 +224,10 @@
       "message": "Wygląda na to, że jeszcze nie korzystają z npmx. Chcesz ich powiadomić?",
       "share_button": "Podziel się na Bluesky",
       "compose_text": "Hej {'@'}{handle}! Czy znasz już npmx.dev? To szybka, nowoczesna przeglądarka rejestru npm z otwartym kodem źródłowym.\nhttps://npmx.dev"
-    }
+    },
+    "public_interests_description": "Publiczne zainteresowania pakietami i sygnały aktywności.",
+    "likes_error": "Nie udało się wczytać polubionych pakietów.",
+    "likes_empty": "Brak polubionych pakietów."
   },
   "package": {
     "not_found": "Nie znaleziono pakietu",

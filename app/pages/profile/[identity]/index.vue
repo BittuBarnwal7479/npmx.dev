@@ -2,6 +2,7 @@
 import { updateProfile as updateProfileUtil } from '~/utils/atproto/profile'
 import type { CommandPaletteContextCommandInput } from '~/types/command-palette'
 import { getSafeHttpUrl } from '#shared/utils/url'
+import { useKeytraceProfile } from '~/composables/useKeytraceProfile'
 
 const route = useRoute('profile-identity')
 const identity = computed(() => route.params.identity)
@@ -96,6 +97,12 @@ const inviteUrl = computed(() => {
   return `https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`
 })
 const safeProfileWebsiteUrl = computed(() => getSafeHttpUrl(profile.value.website))
+
+const {
+  profile: keytraceProfile,
+  accounts: keytraceAccounts,
+  loading: keytraceLoading,
+} = useKeytraceProfile(identity)
 
 useCommandPaletteContextCommands(
   computed((): CommandPaletteContextCommandInput[] => {
@@ -232,20 +239,34 @@ defineOgImage(
       </div>
     </header>
 
+    <section class="mb-8 space-y-4">
+      <ProfileHeader :profile="keytraceProfile" :loading="keytraceLoading" />
+      <LinkedAccounts :accounts="keytraceAccounts" :loading="keytraceLoading" />
+    </section>
+
     <section class="flex flex-col gap-8">
-      <h2
-        class="font-mono text-2xl sm:text-3xl font-medium min-w-0 break-words"
-        :title="$t('profile.likes')"
-        dir="ltr"
-      >
-        {{ $t('profile.likes') }}
-        <span v-if="likes">({{ likes.records?.length ?? 0 }})</span>
-      </h2>
+      <div class="flex flex-col gap-2">
+        <h2
+          class="font-mono text-2xl sm:text-3xl font-medium min-w-0 break-words"
+          :title="$t('profile.likes')"
+          dir="ltr"
+        >
+          {{ $t('profile.likes') }}
+          <span v-if="likes">({{ likes.records?.length ?? 0 }})</span>
+        </h2>
+        <p class="text-fg-muted text-sm">{{ $t('profile.public_interests_description') }}</p>
+      </div>
       <div v-if="status === 'pending'" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <SkeletonBlock v-for="i in 4" :key="i" class="h-16 rounded-lg" />
       </div>
-      <div v-else-if="status === 'error'">
-        <p>{{ $t('common.error') }}</p>
+      <div v-else-if="status === 'error'" class="p-4 bg-bg-subtle border border-border rounded-lg">
+        <p class="font-mono text-sm">{{ $t('profile.likes_error') }}</p>
+      </div>
+      <div
+        v-else-if="!likes?.records?.length"
+        class="p-4 bg-bg-subtle border border-border rounded-lg"
+      >
+        <p class="font-mono text-sm text-fg-muted">{{ $t('profile.likes_empty') }}</p>
       </div>
       <div v-else-if="likes?.records" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <PackageLikeCard v-for="like in likes.records" :packageUrl="like.value.subjectRef" />

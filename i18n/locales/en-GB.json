@@ -45,5 +45,10 @@
       "error": "Failed to load organisations",
       "empty": "No organisations found"
     }
+  },
+  "profile": {
+    "public_interests_description": "Public package interests and activity signals.",
+    "likes_error": "Could not load liked packages.",
+    "likes_empty": "No liked packages yet."
   }
 }

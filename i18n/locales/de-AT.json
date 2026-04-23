@@ -21,5 +21,10 @@
     "instant_search_turn_on": "Schnellsuche aktivieren",
     "instant_search_turn_off": "Schnellsuche deaktivieren",
     "instant_search_advisory": "Die Schnellsuche sendet bei jedem Tastendruck eine Anfrage."
+  },
+  "profile": {
+    "public_interests_description": "Öffentliche Paketinteressen und Aktivitätssignale.",
+    "likes_error": "Beliebte Pakete konnten nicht geladen werden.",
+    "likes_empty": "Noch keine beliebten Pakete vorhanden."
   }
 }

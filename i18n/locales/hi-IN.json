@@ -229,7 +229,10 @@
     "expand": "विस्तृत करें"
   },
   "profile": {
-    "invite": {}
+    "invite": {},
+    "public_interests_description": "सार्वजनिक पैकेज रुचियाँ और गतिविधि संकेत।",
+    "likes_error": "पसंद किए गए पैकेज लोड नहीं हो सके।",
+    "likes_empty": "अभी तक कोई पसंद किए गए पैकेज नहीं।"
   },
   "package": {
     "not_found": "पैकेज नहीं मिला",

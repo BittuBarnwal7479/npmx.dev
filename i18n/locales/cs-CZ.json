@@ -359,7 +359,10 @@
       "message": "Zdá se, že ještě nepoužívají npmx. Chcete jim o tom říct?",
       "share_button": "Sdílet na Bluesky",
       "compose_text": "Ahoj {'@'}{handle}! Viděl jsi už npmx.dev? Je to prohlížeč pro npm registr, který je rychlý, moderní a open-source.\nhttps://npmx.dev"
-    }
+    },
+    "public_interests_description": "Veřejné zájmy o balíčky a signály aktivity.",
+    "likes_error": "Nepodařilo se načíst oblíbené balíčky.",
+    "likes_empty": "Zatím žádné oblíbené balíčky."
   },
   "package": {
     "not_found": "Balíček nenalezen",

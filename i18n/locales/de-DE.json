@@ -1,3 +1,8 @@
 {
-  "$schema": "../schema.json"
+  "$schema": "../schema.json",
+  "profile": {
+    "public_interests_description": "Öffentliche Paketinteressen und Aktivitätssignale.",
+    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
+    "likes_empty": "Noch keine gelikten Pakete."
+  }
 }

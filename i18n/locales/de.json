@@ -358,7 +358,10 @@
       "message": "Es sieht nicht so aus, als ob sie npmx schon benutzen. Möchtest du ihnen davon erzählen?",
       "share_button": "Auf Bluesky teilen",
       "compose_text": "Hey {'@'}{handle}! Hast du schon npmx.dev ausprobiert? Es ist ein Browser für die npm Registry, der schnell, modern und Open-Source ist.\nhttps://npmx.dev"
-    }
+    },
+    "public_interests_description": "Öffentliche Paketinteressen und Aktivitätssignale.",
+    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
+    "likes_empty": "Noch keine gelikten Pakete."
   },
   "package": {
     "not_found": "Paket nicht gefunden",

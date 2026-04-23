@@ -122,7 +122,10 @@
     }
   },
   "profile": {
-    "invite": {}
+    "invite": {},
+    "public_interests_description": "Public package interests and activity signals.",
+    "likes_error": "Could not load liked packages.",
+    "likes_empty": "No liked packages yet."
   },
   "package": {
     "not_found": "ప్యాకేజ్ కనుగొనబడలేదు",

@@ -214,7 +214,10 @@
       "message": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı",
       "share_button": "Paylaş",
       "compose_text": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı: {url}"
-    }
+    },
+    "public_interests_description": "Genel paket ilgi alanları ve aktivite sinyalleri.",
+    "likes_error": "Beğenilen paketler yüklenemedi.",
+    "likes_empty": "Henüz beğenilen paket yok."
   },
   "package": {
     "not_found": "Paket Bulunamadı",
