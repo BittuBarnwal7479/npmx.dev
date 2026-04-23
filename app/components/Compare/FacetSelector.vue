@@ -101,24 +101,21 @@ function deselectAllFacet(category: string) {
         :aria-labelledby="`facet-category-label-${category}`"
         data-facet-category-facets
       >
-        <label
+        <button
           v-for="facet in facetsByCategory[category]"
           :key="facet.id"
+          role="checkbox"
+          :aria-checked="isFacetSelected(facet.id)"
           :title="facet.comingSoon ? $t('compare.facets.coming_soon') : facet.description"
-          class="inline-flex items-center gap-1 px-1.5 rounded border transition-colors text-fg-subtle bg-bg-subtle border-border-subtle hover:(text-fg-muted border-border) has-[:checked]:(text-fg-muted bg-fg/10 border-fg/20 hover:(bg-fg/20 text-fg/50)) has-[:focus-visible]:(outline outline-accent/70)"
+          :disabled="facet.comingSoon"
+          class="inline-flex items-center gap-1 px-1.5 rounded border transition-colors text-fg-subtle bg-bg-subtle border-border-subtle hover:(text-fg-muted border-border) aria-checked:(text-fg-muted bg-fg/10 border-fg/20 hover:(bg-fg/20 text-fg/50)) focus-visible:(outline outline-accent/70)"
           :class="
             facet.comingSoon
               ? 'cursor-not-allowed text-fg-subtle/50 bg-bg-subtle border-border-subtle hover:(text-fg-subtle/50 border-border-subtle)'
               : 'cursor-pointer'
           "
+          @click="toggleFacet(facet.id)"
         >
-          <input
-            type="checkbox"
-            class="sr-only"
-            :checked="isFacetSelected(facet.id)"
-            :disabled="facet.comingSoon"
-            @change="toggleFacet(facet.id)"
-          />
           <span
             v-if="!facet.comingSoon"
             aria-hidden="true"
@@ -128,7 +125,7 @@ function deselectAllFacet(category: string) {
           <span v-if="facet.comingSoon" class="text-4xs"
             >({{ $t('compare.facets.coming_soon') }})</span
           >
-        </label>
+        </button>
       </div>
     </div>
   </div>

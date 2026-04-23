@@ -229,7 +229,7 @@ function formatDate(value: string): string {
 </script>
 
 <template>
-  <li class="rounded-md border border-border bg-bg-subtle px-3 py-3 sm:px-4">
+  <div class="rounded-md border border-border bg-bg-subtle px-3 py-3 sm:px-4">
     <div class="flex items-start justify-between gap-3">
       <div class="min-w-0">
         <div class="flex items-center gap-3 min-w-0">
@@ -364,5 +364,5 @@ function formatDate(value: string): string {
         </p>
       </div>
     </div>
-  </li>
+  </div>
 </template>
