@@ -985,9 +985,6 @@
         "edit": {
           "type": "string"
         },
-        "error": {
-          "type": "string"
-        },
         "view_on": {
           "type": "object",
           "properties": {
@@ -1069,13 +1066,13 @@
         "likes": {
           "type": "string"
         },
+        "public_interests_description": {
+          "type": "string"
+        },
         "likes_error": {
           "type": "string"
         },
         "likes_empty": {
-          "type": "string"
-        },
-        "public_interests_description": {
           "type": "string"
         },
         "seo_title": {
