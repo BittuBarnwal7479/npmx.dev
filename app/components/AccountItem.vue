@@ -167,6 +167,9 @@ async function reverifyAccount() {
       body,
     })
 
+    // Attach rejection handler to prevent unhandled promise rejection warnings
+    responsePromise.catch(() => {})
+
     await runStep(0)
     await runStep(1)
     await runStep(2)
@@ -199,10 +202,7 @@ function getStepState(stepIndex: number): 'done' | 'active' | 'idle' {
     return 'done'
   }
 
-  if (
-    currentVerificationStep.value === stepIndex &&
-    (isReverifying.value || !!reverifyError.value)
-  ) {
+  if (currentVerificationStep.value === stepIndex && isReverifying.value && !reverifyError.value) {
     return 'active'
   }
 

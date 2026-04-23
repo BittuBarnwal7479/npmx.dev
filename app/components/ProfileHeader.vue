@@ -53,7 +53,7 @@ function onAvatarError() {
         <img
           v-if="profile.avatar && showAvatar"
           :src="profile.avatar"
-          :alt="profile.name || 'Profile avatar'"
+          :alt="profile.name || $t('profile.avatar_alt')"
           class="h-full w-full object-cover"
           @error="onAvatarError"
         />
@@ -62,7 +62,7 @@ function onAvatarError() {
 
       <div class="min-w-0">
         <h2 class="font-mono text-xl sm:text-2xl font-medium min-w-0 break-words">
-          {{ profile.name || 'Unknown Profile' }}
+          {{ profile.name || $t('profile.unknown_profile') }}
         </h2>
         <p class="mt-2 text-fg-muted min-w-0 break-words">{{ profile.description }}</p>
       </div>

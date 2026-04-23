@@ -365,6 +365,20 @@
       "message": "It doesn't look like they're using npmx yet. Want to tell them about it?",
       "share_button": "Share on Bluesky",
       "compose_text": "Hey {'@'}{handle}! Have you checked out npmx.dev yet? It's a browser for the npm registry that's fast, modern, and open-source.\nhttps://npmx.dev"
+    },
+    "avatar_alt": "Profile avatar",
+    "unknown_profile": "Unknown profile",
+    "linked_accounts": {
+      "status": {
+        "verified": "Verified",
+        "unverified": "Unverified",
+        "stale": "Stale",
+        "failed": "Failed"
+      },
+      "title": "Linked Accounts",
+      "verified_summary": "Verified accounts",
+      "legend_aria_label": "Account verification status legend",
+      "empty": "No linked accounts"
     }
   },
   "package": {

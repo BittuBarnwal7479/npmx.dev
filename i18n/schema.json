@@ -1101,6 +1101,48 @@
             }
           },
           "additionalProperties": false
+        },
+        "avatar_alt": {
+          "type": "string"
+        },
+        "unknown_profile": {
+          "type": "string"
+        },
+        "linked_accounts": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "object",
+              "properties": {
+                "verified": {
+                  "type": "string"
+                },
+                "unverified": {
+                  "type": "string"
+                },
+                "stale": {
+                  "type": "string"
+                },
+                "failed": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "title": {
+              "type": "string"
+            },
+            "verified_summary": {
+              "type": "string"
+            },
+            "legend_aria_label": {
+              "type": "string"
+            },
+            "empty": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
