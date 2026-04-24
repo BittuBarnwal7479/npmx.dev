@@ -2,7 +2,6 @@
 import { updateProfile as updateProfileUtil } from '~/utils/atproto/profile'
 import type { CommandPaletteContextCommandInput } from '~/types/command-palette'
 import { getSafeHttpUrl } from '#shared/utils/url'
-import { useKeytraceProfile } from '~/composables/useKeytraceProfile'
 
 const route = useRoute('profile-identity')
 const identity = computed(() => route.params.identity)

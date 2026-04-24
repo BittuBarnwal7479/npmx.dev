@@ -11,6 +11,8 @@ const props = defineProps<{
   account: KeytraceAccount
 }>()
 
+const { t } = useI18n()
+
 const platformLabelMap: Record<string, string> = {
   github: 'GitHub',
   npm: 'npm',
@@ -36,11 +38,11 @@ const proofMethodLabelMap: Record<KeytraceAccount['proofMethod'], string> = {
   other: 'other',
 }
 
-const statusLabelMap: Record<KeytraceAccount['status'], string> = {
-  verified: 'Verified',
-  unverified: 'Unverified',
-  stale: 'Stale',
-  failed: 'Failed',
+const statusLabelMap: Record<KeytraceAccount['status'], { key: string; fallback: string }> = {
+  verified: { key: 'profile.linked_accounts.status.verified', fallback: 'Verified' },
+  unverified: { key: 'profile.linked_accounts.status.unverified', fallback: 'Unverified' },
+  stale: { key: 'profile.linked_accounts.status.stale', fallback: 'Stale' },
+  failed: { key: 'profile.linked_accounts.status.failed', fallback: 'Failed' },
 }
 
 const statusClassMap: Record<KeytraceAccount['status'], string> = {
@@ -117,7 +119,12 @@ watch(
   { immediate: true },
 )
 
-const statusLabel = computed(() => statusLabelMap[localStatus.value])
+const statusLabel = computed(() => {
+  const statusEntry = statusLabelMap[localStatus.value]
+  const translatedStatus = t(statusEntry.key)
+
+  return translatedStatus === statusEntry.key ? statusEntry.fallback : translatedStatus
+})
 const statusClasses = computed(() => statusClassMap[localStatus.value])
 const proofMethodLabel = computed(() => proofMethodLabelMap[props.account.proofMethod])
 

@@ -376,7 +376,7 @@
         "failed": "Failed"
       },
       "title": "Linked Accounts",
-      "verified_summary": "Verified accounts",
+      "verified_summary": "{verified}/{total} verified",
       "legend_aria_label": "Account verification status legend",
       "empty": "No linked accounts"
     }

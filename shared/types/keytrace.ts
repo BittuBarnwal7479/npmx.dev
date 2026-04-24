@@ -38,4 +38,5 @@ export type KeytraceReverifyResponse = {
   status: KeytraceVerificationStatus
   lastCheckedAt: string
   failureReason?: string
+  retractedAt?: string
 }
