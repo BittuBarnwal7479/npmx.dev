@@ -349,6 +349,8 @@
     "website": "Website",
     "website_placeholder": "https://beispiel.de",
     "likes": "Likes",
+    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
+    "likes_empty": "Noch keine gelikten Pakete.",
     "seo_title": "{handle} - npmx",
     "seo_description": "npmx-Profil von {handle}",
     "not_found": "Profil nicht gefunden",
@@ -358,10 +360,6 @@
       "share_button": "Auf Bluesky teilen",
       "compose_text": "Hey {'@'}{handle}! Hast du schon npmx.dev ausprobiert? Es ist ein Browser für die npm Registry, der schnell, modern und Open-Source ist.\nhttps://npmx.dev"
     },
-    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
-    "likes_empty": "Noch keine gelikten Pakete.",
-    "avatar_alt": "Profilavatar",
-    "unknown_profile": "Unbekanntes Profil",
     "linked_accounts": {
       "status": {
         "verified": "Verifiziert",
@@ -394,6 +392,7 @@
       "size": "Installationsgröße um {percent} gestiegen ({size} größer)",
       "deps": "{count} zusätzliche Abhängigkeiten"
     },
+    "size_decrease": {},
     "replacement": {
       "title": "Du brauchst diese Abhängigkeit vielleicht nicht.",
       "native": "Dies kann durch {replacement} ersetzt werden, verfügbar seit Node {nodeVersion}.",
@@ -571,6 +570,7 @@
       "current_tags": "Aktuelle Tags",
       "no_match_filter": "Keine Versionen entsprechen {filter}"
     },
+    "timeline": {},
     "dependencies": {
       "title": "Abhängigkeit ({count}) | Abhängigkeiten ({count})",
       "list_label": "Paketabhängigkeiten",
@@ -1331,7 +1331,10 @@
         "vulnerabilities": {
           "label": "Sicherheitslücken",
           "description": "Bekannte Sicherheitsrisiken"
-        }
+        },
+        "githubStars": {},
+        "githubIssues": {},
+        "createdAt": {}
       },
       "values": {
         "any": "Beliebig",
