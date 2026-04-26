@@ -1099,12 +1099,6 @@
           },
           "additionalProperties": false
         },
-        "avatar_alt": {
-          "type": "string"
-        },
-        "unknown_profile": {
-          "type": "string"
-        },
         "linked_accounts": {
           "type": "object",
           "properties": {
