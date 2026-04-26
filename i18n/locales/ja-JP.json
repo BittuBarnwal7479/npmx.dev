@@ -224,7 +224,6 @@
       "share_button": "Blueskyで共有",
       "compose_text": "{'@'}{handle} さん、npmx.devはもうチェックしましたか？ 高速でモダンなオープンソースのnpmレジストリブラウザです。\nhttps://npmx.dev"
     },
-    "public_interests_description": "公開パッケージの関心事とアクティビティシグナル。",
     "likes_error": "いいねしたパッケージを読み込めませんでした。",
     "likes_empty": "いいねしたパッケージはまだありません。"
   },

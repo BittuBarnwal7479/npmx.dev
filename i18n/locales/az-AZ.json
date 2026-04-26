@@ -214,7 +214,6 @@
       "share_button": "Bluesky-da paylaş",
       "compose_text": "Salam {'@'}{handle}! npmx.dev-i yoxlamısan? Bu, npm reyestri üçün sürətli, müasir və açıq mənbəli brauzerdir.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Açıq paket maraqları və fəaliyyət siqnalları.",
     "likes_error": "Bəyənilən paketlər yüklənə bilmədi.",
     "likes_empty": "Hələ bəyənilən paket yoxdur."
   },

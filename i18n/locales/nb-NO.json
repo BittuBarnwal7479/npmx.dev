@@ -358,7 +358,6 @@
       "share_button": "Del på Bluesky",
       "compose_text": "Hei {'@'}{handle}! Har du sjekket ut npmx.dev ennå? Det er en leser for npm-registeret som er rask, moderne og åpen kildekode.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Offentlige pakkeinteresser og aktivitetssignaler.",
     "likes_error": "Kunne ikke laste likte pakker.",
     "likes_empty": "Ingen likte pakker ennå."
   },

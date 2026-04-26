@@ -355,7 +355,6 @@
       "share_button": "Compartilhar no Bluesky",
       "compose_text": "Olá, {'@'}{handle}! Você já conferiu npmx.dev? É um navegador para o registro npm rápido, moderno e de código aberto.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Interesses públicos de pacotes e sinais de atividade.",
     "likes_error": "Não foi possível carregar os pacotes curtidos.",
     "likes_empty": "Nenhum pacote curtido ainda."
   },

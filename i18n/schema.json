@@ -1066,9 +1066,6 @@
         "likes": {
           "type": "string"
         },
-        "public_interests_description": {
-          "type": "string"
-        },
         "likes_error": {
           "type": "string"
         },

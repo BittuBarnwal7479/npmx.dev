@@ -177,7 +177,6 @@
       "share_button": "Megosztás a Bluesky-on",
       "compose_text": "Halló {'@'}{handle}! Már próbáltad az npmx.dev-et? Egy gyors, modern és nyílt forráskódú böngésző az npm regiszterhez.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Nyilvános csomagérdeklődések és aktivitási jelek.",
     "likes_error": "Nem sikerült betölteni a kedvelt csomagokat.",
     "likes_empty": "Még nincsenek kedvelt csomagok."
   },

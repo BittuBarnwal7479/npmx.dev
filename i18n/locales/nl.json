@@ -358,7 +358,6 @@
       "share_button": "Deel op Bluesky",
       "compose_text": "Hallo {'@'}{handle}! Hebt u npmx.dev al bekeken? Het is een browser voor het npm register die snel, modern en open source is.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Openbare pakketinteresses en activiteitssignalen.",
     "likes_error": "Kon gelikete pakketten niet laden.",
     "likes_empty": "Nog geen gelikete pakketten."
   },

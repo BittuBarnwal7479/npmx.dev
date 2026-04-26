@@ -357,7 +357,6 @@
       "share_button": "分享到 Bluesky",
       "compose_text": "Hey {'@'}{handle}！你用過 npmx.dev 了嗎？它是 npm Registry 的瀏覽器，快速、現代，而且是開源的。\nhttps://npmx.dev"
     },
-    "public_interests_description": "公開套件興趣與活動訊號。",
     "likes_error": "無法載入喜歡的套件。",
     "likes_empty": "目前尚無喜歡的套件。"
   },

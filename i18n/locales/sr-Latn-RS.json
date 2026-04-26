@@ -244,7 +244,6 @@
       "share_button": "Podelite na Bluesky-u",
       "compose_text": "Hej {'@'}{handle}! Da li ste već pogledali npmx.dev? To je pretraživač za npm registar koji je brz, moderan i otvorenog koda.\nhttps://npmx.dev"
     },
-    "public_interests_description": "Javna interesovanja za pakete i signali aktivnosti.",
     "likes_error": "Nije moguće učitati omiljene pakete.",
     "likes_empty": "Još nema omiljenih paketa."
   },

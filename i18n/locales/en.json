@@ -354,7 +354,6 @@
     "website": "Website",
     "website_placeholder": "https://example.com",
     "likes": "Likes",
-    "public_interests_description": "Public package interests and activity signals.",
     "likes_error": "Could not load liked packages.",
     "likes_empty": "No liked packages yet.",
     "seo_title": "{handle} - npmx",
