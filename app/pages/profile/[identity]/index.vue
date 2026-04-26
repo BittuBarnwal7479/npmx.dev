@@ -97,11 +97,7 @@ const inviteUrl = computed(() => {
 })
 const safeProfileWebsiteUrl = computed(() => getSafeHttpUrl(profile.value.website))
 
-const {
-  profile: keytraceProfile,
-  accounts: keytraceAccounts,
-  loading: keytraceLoading,
-} = useKeytraceProfile(identity)
+const { accounts: keytraceAccounts, loading: keytraceLoading } = useKeytraceProfile(identity)
 
 useCommandPaletteContextCommands(
   computed((): CommandPaletteContextCommandInput[] => {
@@ -238,8 +234,7 @@ defineOgImage(
       </div>
     </header>
 
-    <section class="mb-8 space-y-4">
-      <ProfileHeader :profile="keytraceProfile" :loading="keytraceLoading" />
+    <section class="mb-8">
       <LinkedAccounts
         :identity="identity"
         :accounts="keytraceAccounts"
