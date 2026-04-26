@@ -14,8 +14,7 @@ function domainToDisplayName(domain: string): string {
 }
 
 function buildDefaultAvatarUrl(domain: string, imageProxySecret: string): string {
-  const rawFallbackAvatar = `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(domain)}`
-  return toProxiedImageUrl(rawFallbackAvatar, imageProxySecret)
+  return buildSeededAvatarUrl(domain, imageProxySecret)
 }
 
 function buildSeededAvatarUrl(seed: string, imageProxySecret: string): string {
@@ -23,7 +22,11 @@ function buildSeededAvatarUrl(seed: string, imageProxySecret: string): string {
   return toProxiedImageUrl(rawFallbackAvatar, imageProxySecret)
 }
 
-function toProfileAvatarUrl(rawAvatarUrl: string | undefined, domain: string, imageProxySecret: string): string {
+function toProfileAvatarUrl(
+  rawAvatarUrl: string | undefined,
+  domain: string,
+  imageProxySecret: string,
+): string {
   const safeAvatarUrl = getSafeHttpUrl(rawAvatarUrl)
   if (!safeAvatarUrl) {
     return buildDefaultAvatarUrl(domain, imageProxySecret)
@@ -56,7 +59,10 @@ function buildFallbackProfile(domain: string, imageProxySecret: string): Keytrac
   }
 }
 
-function buildServiceUnavailableProfile(domain: string, imageProxySecret: string): KeytraceResponse {
+function buildServiceUnavailableProfile(
+  domain: string,
+  imageProxySecret: string,
+): KeytraceResponse {
   return {
     profile: {
       name: `${domainToDisplayName(domain)} Developer`,
@@ -111,7 +117,10 @@ type KeytraceFetchResult =
   | { kind: 'error'; error: unknown }
 
 // Fetch real Keytrace profile data
-async function fetchKeytraceProfile(domain: string, imageProxySecret: string): Promise<KeytraceFetchResult> {
+async function fetchKeytraceProfile(
+  domain: string,
+  imageProxySecret: string,
+): Promise<KeytraceFetchResult> {
   try {
     const result = await getClaimsForHandle(domain)
 
