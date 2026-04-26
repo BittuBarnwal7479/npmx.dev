@@ -101,31 +101,30 @@ function deselectAllFacet(category: string) {
         :aria-labelledby="`facet-category-label-${category}`"
         data-facet-category-facets
       >
-        <button
+        <ButtonBase
           v-for="facet in facetsByCategory[category]"
           :key="facet.id"
+          size="sm"
           role="checkbox"
-          :aria-checked="isFacetSelected(facet.id)"
           :title="facet.comingSoon ? $t('compare.facets.coming_soon') : facet.description"
           :disabled="facet.comingSoon"
-          class="inline-flex items-center gap-1 px-1.5 rounded border transition-colors text-fg-subtle bg-bg-subtle border-border-subtle hover:(text-fg-muted border-border) aria-checked:(text-fg-muted bg-fg/10 border-fg/20 hover:(bg-fg/20 text-fg/50)) focus-visible:(outline outline-accent/70)"
-          :class="
+          :aria-checked="isFacetSelected(facet.id)"
+          :aria-label="facet.label"
+          class="gap-1 px-1.5 rounded transition-colors text-fg-subtle bg-bg-subtle border-border-subtle enabled:hover:(text-fg-muted border-border) aria-checked:(text-fg-muted bg-fg/10 border-fg/20 hover:enabled:(bg-fg/20 text-fg/50)) focus-visible:outline-accent/70 disabled:(text-fg-subtle/50 bg-bg-subtle border-border-subtle)"
+          @click="!facet.comingSoon && toggleFacet(facet.id)"
+          :classicon="
             facet.comingSoon
-              ? 'cursor-not-allowed text-fg-subtle/50 bg-bg-subtle border-border-subtle hover:(text-fg-subtle/50 border-border-subtle)'
-              : 'cursor-pointer'
+              ? undefined
+              : isFacetSelected(facet.id)
+                ? 'i-lucide:check'
+                : 'i-lucide:plus'
           "
-          @click="toggleFacet(facet.id)"
         >
-          <span
-            v-if="!facet.comingSoon"
-            aria-hidden="true"
-            :class="isFacetSelected(facet.id) ? 'i-lucide:check' : 'i-lucide:plus'"
-          />
           {{ facet.label }}
           <span v-if="facet.comingSoon" class="text-4xs"
             >({{ $t('compare.facets.coming_soon') }})</span
           >
-        </button>
+        </ButtonBase>
       </div>
     </div>
   </div>

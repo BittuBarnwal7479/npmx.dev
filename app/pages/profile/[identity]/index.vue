@@ -257,7 +257,6 @@ defineOgImage(
           {{ $t('profile.likes') }}
           <span v-if="likes">({{ likes.records?.length ?? 0 }})</span>
         </h2>
-        <p class="text-fg-muted text-sm">{{ $t('profile.public_interests_description') }}</p>
       </div>
       <div v-if="status === 'pending'" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <SkeletonBlock v-for="i in 4" :key="i" class="h-16 rounded-lg" />
