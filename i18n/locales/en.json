@@ -365,8 +365,6 @@
       "share_button": "Share on Bluesky",
       "compose_text": "Hey {'@'}{handle}! Have you checked out npmx.dev yet? It's a browser for the npm registry that's fast, modern, and open-source.\nhttps://npmx.dev"
     },
-    "avatar_alt": "Profile avatar",
-    "unknown_profile": "Unknown profile",
     "linked_accounts": {
       "status": {
         "verified": "Verified",

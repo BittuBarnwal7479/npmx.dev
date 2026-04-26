@@ -273,7 +273,6 @@ import SizeIncrease from '~/components/Package/SizeIncrease.vue'
 import Likes from '~/components/Package/Likes.vue'
 import AccountItem from '~/components/AccountItem.vue'
 import LinkedAccounts from '~/components/LinkedAccounts.vue'
-import ProfileHeader from '~/components/ProfileHeader.vue'
 import type { VueUiXyDatasetItem } from 'vue-data-ui'
 
 describe('component accessibility audits', () => {
@@ -909,22 +908,6 @@ describe('component accessibility audits', () => {
     it('should have no accessibility violations', async () => {
       const component = await mountSuspended(PackageLikeCard, {
         props: { packageUrl: 'https://npmx.dev/package/vue' },
-      })
-      const results = await runAxe(component)
-      expect(results.violations).toEqual([])
-    })
-  })
-
-  describe('ProfileHeader', () => {
-    it('should have no accessibility violations with profile data', async () => {
-      const component = await mountSuspended(ProfileHeader, {
-        props: {
-          profile: {
-            name: 'npmx Team',
-            avatar: 'https://api.dicebear.com/9.x/shapes/svg?seed=npmx',
-            description: 'Open source maintainers',
-          },
-        },
       })
       const results = await runAxe(component)
       expect(results.violations).toEqual([])
