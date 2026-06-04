@@ -328,7 +328,6 @@
     "cancel": "Anulează",
     "save": "Salvează",
     "edit": "Editează",
-    "error": "Eroare",
     "view_on": {
       "npm": "Vizualizează pe npm",
       "github": "Vizualizează pe GitHub",
@@ -364,6 +363,9 @@
       "message": "Se pare că încă nu folosesc npmx. Vrei să le spui despre asta?",
       "share_button": "Partajează pe Bluesky",
       "compose_text": "Salut {'@'}{handle}! Ai vizitat deja npmx.dev? Este un browser pentru registrul npm, rapid, modern și open-source.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {

@@ -328,7 +328,6 @@
     "cancel": "Cancelar",
     "save": "Guardar",
     "edit": "Editar",
-    "error": "Erro",
     "view_on": {
       "npm": "Ver no npm",
       "github": "Ver no GitHub",
@@ -364,6 +363,9 @@
       "message": "Parece que ainda não estão a usar o npmx. Queres contar-lhes sobre isso?",
       "share_button": "Partilhar no Bluesky",
       "compose_text": "Olá, {'@'}{handle}! Já conheces o npmx.dev? É um navegador para o registo npm rápido, moderno e de código aberto.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -591,7 +593,10 @@
       "trusted_publisher_added": "Publicação de confiança ativada",
       "trusted_publisher_removed": "Publicação de confiança removida",
       "provenance_added": "Proveniência ativada",
-      "provenance_removed": "Proveniência removida"
+      "provenance_removed": "Proveniência removida",
+      "chart": {
+        "copy_alt": {}
+      }
     },
     "dependencies": {
       "title": "Dependência ({count}) | Dependências ({count})",
@@ -1704,5 +1709,8 @@
       "discord_link_text": "chat.npmx.dev"
     }
   },
-  "alt_logo_kawaii": "Uma versão fofa, arredondada e colorida do logótipo do npmx."
+  "alt_logo_kawaii": "Uma versão fofa, arredondada e colorida do logótipo do npmx.",
+  "changelog": {
+    "error": {}
+  }
 }
