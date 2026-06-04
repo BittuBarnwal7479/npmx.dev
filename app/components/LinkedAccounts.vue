@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import type { KeytraceAccount } from '#shared/types/keytrace'
 
-const { t } = useI18n()
+const legendTooltipVisible = ref(false)
+
+function showLegendTooltip() {
+  legendTooltipVisible.value = true
+}
+
+function hideLegendTooltip() {
+  legendTooltipVisible.value = false
+}
 
 const statusLegend = computed(() => [
   {
@@ -40,16 +48,23 @@ const verifiedCount = computed(
         <h2 class="font-mono text-xl sm:text-2xl font-medium">
           {{ $t('profile.linked_accounts.title') }}
         </h2>
-        <TooltipBase position="bottom" :offset="8" interactive>
-          <template #trigger>
-            <button
-              type="button"
-              class="size-6 rounded-full flex items-center justify-center text-fg-muted hover:text-fg"
-              :aria-label="$t('profile.linked_accounts.legend_info_title')"
-            >
-              <span class="i-lucide:info size-4" aria-hidden="true" />
-            </button>
-          </template>
+        <TooltipBase
+          :is-visible="legendTooltipVisible"
+          position="bottom"
+          :offset="8"
+          interactive
+          @mouseenter="showLegendTooltip"
+          @mouseleave="hideLegendTooltip"
+          @focusin="showLegendTooltip"
+          @focusout="hideLegendTooltip"
+        >
+          <button
+            type="button"
+            class="size-6 rounded-full flex items-center justify-center text-fg-muted hover:text-fg"
+            :aria-label="$t('profile.linked_accounts.legend_info_title')"
+          >
+            <span class="i-lucide:info size-4" aria-hidden="true" />
+          </button>
           <template #content>
             <div class="p-3 max-w-xs text-sm">
               <p class="font-medium">{{ $t('profile.linked_accounts.legend_info_title') }}</p>
