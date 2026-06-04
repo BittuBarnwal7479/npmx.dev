@@ -1,9 +1,10 @@
 import type { ColumnConfig, FilterChip } from '#shared/types/preferences'
-import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { mountSuspended, registerEndpoint } from '@nuxt/test-utils/runtime'
 import type { VueWrapper } from '@vue/test-utils'
 import 'axe-core'
 import type { AxeResults, RunOptions } from 'axe-core'
 import { afterEach, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest'
+import { createLikesLeaderboardEntry } from '~~/test/fixtures/likes-leaderboard'
 
 // axe-core is a UMD module that exposes itself as window.axe in the browser
 declare const axe: {
@@ -143,6 +144,7 @@ import {
   AppMark,
   AboutLogoImg,
   AboutLogoList,
+  AboutGovernanceList,
   AuthorAvatar,
   AuthorList,
   BackButton,
@@ -157,9 +159,12 @@ import {
   ButtonBase,
   LandingIntroHeader,
   NoodleKawaiiLogo,
-  NoodleArtemisLogo,
+  NoodleNodejsLogo,
+  NoodlePride1Logo,
   LinkBase,
   CallToAction,
+  ChangelogCard,
+  ChangelogErrorMsg,
   CodeDirectoryListing,
   CodeFileTree,
   CodeHeader,
@@ -251,6 +256,7 @@ import {
   PackageSelectionView,
   PackageSelectionCheckbox,
   PackageExternalLinks,
+  LicenseChangeWarning,
   ChartSplitSparkline,
   TabRoot,
   TabList,
@@ -268,11 +274,14 @@ import SearchProviderToggleServer from '~/components/SearchProviderToggle.server
 import PackageTrendsChart from '~/components/Package/TrendsChart.vue'
 import FacetBarChart from '~/components/Compare/FacetBarChart.vue'
 import FacetScatterChart from '~/components/Compare/FacetScatterChart.vue'
+import PackageTimelineChart from '~/components/Package/TimelineChart.vue'
 import PackageLikeCard from '~/components/Package/LikeCard.vue'
 import SizeIncrease from '~/components/Package/SizeIncrease.vue'
+import SizeDecrease from '~/components/Package/SizeDecrease.vue'
 import Likes from '~/components/Package/Likes.vue'
 import AccountItem from '~/components/AccountItem.vue'
 import LinkedAccounts from '~/components/LinkedAccounts.vue'
+import LikesLeaderboardPage from '~/pages/leaderboard/likes.vue'
 import type { VueUiXyDatasetItem } from 'vue-data-ui'
 
 describe('component accessibility audits', () => {
@@ -369,7 +378,13 @@ describe('component accessibility audits', () => {
     })
 
     it('should have no accessibility violations', async () => {
-      const component = await mountSuspended(NoodleArtemisLogo)
+      const component = await mountSuspended(NoodleNodejsLogo)
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(NoodlePride1Logo)
       const results = await runAxe(component)
       expect(results.violations).toEqual([])
     })
@@ -383,6 +398,21 @@ describe('component accessibility audits', () => {
     })
   })
 
+  describe('LicenseChangeWarning', () => {
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(LicenseChangeWarning, {
+        props: {
+          change: { from: 'MIT', to: 'GPL-3.0' },
+        },
+        global: {
+          mocks: { $t: (key: string) => key },
+          stubs: { 'i18n-t': { template: '<span><slot name="license_change" /></span>' } },
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
   describe('AppLogo', () => {
     it('should have no accessibility violations', async () => {
       const component = await mountSuspended(AppLogo)
@@ -488,6 +518,37 @@ describe('component accessibility audits', () => {
                   },
                 },
               ],
+            },
+          ],
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('AboutGovernanceList', () => {
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(AboutGovernanceList, {
+        props: {
+          members: [
+            {
+              id: 1,
+              login: 'steward1',
+              avatar_url: 'https://github.com/steward1.png',
+              html_url: 'https://github.com/steward1',
+              contributions: 100,
+              role: 'steward',
+              sponsors_url: 'https://github.com/sponsors/steward1',
+            },
+            {
+              id: 3,
+              login: 'contributor1',
+              avatar_url: 'https://github.com/contributor1.png',
+              html_url: 'https://github.com/contributor1',
+              contributions: 100,
+              role: 'contributor',
+              sponsors_url: 'https://github.com/sponsors/contributor1',
             },
           ],
         },
@@ -692,6 +753,70 @@ describe('component accessibility audits', () => {
       const results = await runAxe(component)
       expect(results.violations).toEqual([])
     })
+
+    it('should have no accessibility violations with the top-liked badge visible', async () => {
+      registerEndpoint('/api/social/likes/lodash', () => ({
+        totalLikes: 42,
+        userHasLiked: false,
+        topLikedRank: 3,
+      }))
+
+      const component = await mountSuspended(Likes, {
+        props: { packageName: 'lodash' },
+      })
+
+      // Likes fetches client-side (`server: false`), so wait for the fetched badge
+      // state before running axe against the rendered variant.
+      await vi.waitFor(() => {
+        expect(component.text()).toContain('#3')
+      })
+
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('LikesLeaderboardPage', () => {
+    it('should have no accessibility violations when data is available', async () => {
+      clearNuxtData()
+      registerEndpoint('/api/leaderboard/likes', () => [
+        createLikesLeaderboardEntry('vue', {
+          rank: 1,
+          totalLikes: 120,
+          homepagePreviewUrl: 'https://images.example.com/vue-home.png',
+          homepagePreviewWidth: 1200,
+          homepagePreviewHeight: 630,
+        }),
+      ])
+
+      const component = await mountSuspended(LikesLeaderboardPage, {
+        route: '/leaderboard/likes',
+      })
+
+      await vi.waitFor(() => {
+        expect(component.text()).toContain('Likes Leaderboard')
+        expect(component.text()).toContain('vue')
+      })
+
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+
+    it('should have no accessibility violations when unavailable', async () => {
+      clearNuxtData()
+      registerEndpoint('/api/leaderboard/likes', () => [])
+
+      const component = await mountSuspended(LikesLeaderboardPage, {
+        route: '/leaderboard/likes',
+      })
+
+      await vi.waitFor(() => {
+        expect(component.text()).toContain('No likes leaderboard yet')
+      })
+
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
   })
 
   describe('TagRadioButton', () => {
@@ -847,7 +972,11 @@ describe('component accessibility audits', () => {
             'versions': {
               '18.2.0': {
                 version: '18.2.0',
-                hasProvenance: false,
+                trustStatus: {
+                  provenance: false,
+                  trustedPublisher: false,
+                  stagedPublish: false,
+                },
                 tags: [],
               },
             },
@@ -1053,6 +1182,22 @@ describe('component accessibility audits', () => {
 
       const results = await runAxe(wrapper)
       expect(results.violations).toEqual([])
+    })
+
+    describe('PackageTimelineChart', () => {
+      it('should have no accessibility violations', async () => {
+        const wrapper = await mountSuspended(PackageTimelineChart, {
+          props: {
+            sizeCache: new Map(),
+            versionSubEvents: new Map(),
+            timelineEntries: [],
+            selectedVersion: null,
+            loading: false,
+          },
+        })
+        const results = await runAxe(wrapper)
+        expect(results.violations).toEqual([])
+      })
     })
 
     describe('FacetBarChart', () => {
@@ -2591,6 +2736,36 @@ describe('component accessibility audits', () => {
     })
   })
 
+  describe('Changelog', () => {
+    it('ChangelogCard should have no accessibility violations', async () => {
+      const component = await mountSuspended(ChangelogCard, {
+        props: {
+          release: {
+            html: '<p>test a11y</p>',
+            id: 'a11y',
+            title: '1.0.0',
+            publishedAt: '2026-02-11 10:00:00.000Z',
+          },
+          tocHeaderClass: 'toc',
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+
+    it('ChangelogErrorMsg should have no accessibility violations for warning variant', async () => {
+      const component = await mountSuspended(ChangelogErrorMsg, {
+        props: {
+          changelogLink: 'https://github.com/npmx-dev/npmx.dev/releases/',
+          pkgName: 'npmx-dev',
+          viewOnGit: 'View on Github',
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
   describe('CollapsibleSection', () => {
     it('should have no accessibility violations', async () => {
       const component = await mountSuspended(CollapsibleSection, {
@@ -4046,6 +4221,7 @@ describe('component accessibility audits', () => {
       const component = await mountSuspended(SizeIncrease, {
         props: {
           diff: {
+            direction: 'increase',
             comparisonVersion: '1.0.0',
             sizeRatio: 1,
             sizeIncrease: 200,
@@ -4067,6 +4243,7 @@ describe('component accessibility audits', () => {
       const component = await mountSuspended(SizeIncrease, {
         props: {
           diff: {
+            direction: 'increase',
             comparisonVersion: '1.0.0',
             sizeRatio: 1,
             sizeIncrease: 200,
@@ -4088,6 +4265,7 @@ describe('component accessibility audits', () => {
       const component = await mountSuspended(SizeIncrease, {
         props: {
           diff: {
+            direction: 'increase',
             comparisonVersion: '1.0.0',
             sizeRatio: 0,
             sizeIncrease: 0,
@@ -4096,6 +4274,74 @@ describe('component accessibility audits', () => {
             depDiff: 5,
             currentDeps: 10,
             previousDeps: 5,
+            sizeThresholdExceeded: false,
+            depThresholdExceeded: true,
+          },
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+  })
+
+  describe('SizeDecrease', () => {
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(SizeDecrease, {
+        props: {
+          diff: {
+            direction: 'decrease',
+            comparisonVersion: '1.0.0',
+            sizeRatio: -0.5,
+            sizeIncrease: -200,
+            currentSize: 200,
+            previousSize: 400,
+            depDiff: -5,
+            currentDeps: 5,
+            previousDeps: 10,
+            sizeThresholdExceeded: true,
+            depThresholdExceeded: true,
+          },
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+
+    it('should have no accessibility violations with only size decrease', async () => {
+      const component = await mountSuspended(SizeDecrease, {
+        props: {
+          diff: {
+            direction: 'decrease',
+            comparisonVersion: '1.0.0',
+            sizeRatio: -0.5,
+            sizeIncrease: -200,
+            currentSize: 200,
+            previousSize: 400,
+            depDiff: 0,
+            currentDeps: 5,
+            previousDeps: 5,
+            sizeThresholdExceeded: true,
+            depThresholdExceeded: false,
+          },
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
+    })
+
+    it('should have no accessibility violations with only dependency decrease', async () => {
+      const component = await mountSuspended(SizeDecrease, {
+        props: {
+          diff: {
+            direction: 'decrease',
+            comparisonVersion: '1.0.0',
+            sizeRatio: 0,
+            sizeIncrease: 0,
+            currentSize: 200,
+            previousSize: 200,
+            depDiff: -5,
+            currentDeps: 5,
+            previousDeps: 10,
             sizeThresholdExceeded: false,
             depThresholdExceeded: true,
           },

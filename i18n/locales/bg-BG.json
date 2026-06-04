@@ -889,7 +889,6 @@
     },
     "team": {
       "title": "Отбор",
-      "governance": "Управление",
       "role_steward": "управител",
       "role_maintainer": "поддържащ",
       "sponsor": "спонсор",

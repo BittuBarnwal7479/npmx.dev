@@ -1133,7 +1133,6 @@
     },
     "team": {
       "title": "Team",
-      "governance": "Verwaltung",
       "role_steward": "Verwalter",
       "role_maintainer": "Maintainer",
       "sponsor": "Sponsor",

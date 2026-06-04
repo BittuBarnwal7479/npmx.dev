@@ -889,7 +889,6 @@
     },
     "team": {
       "title": "Csapat",
-      "governance": "Irányítás",
       "role_steward": "gondnok",
       "role_maintainer": "karbantartó",
       "sponsor": "szponzor",
