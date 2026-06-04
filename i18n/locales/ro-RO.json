@@ -365,7 +365,12 @@
       "compose_text": "Salut {'@'}{handle}! Ai vizitat deja npmx.dev? Este un browser pentru registrul npm, rapid, modern și open-source.\nhttps://npmx.dev"
     },
     "linked_accounts": {
-      "status": {}
+      "status": {},
+      "legend_info_title": "Ce înseamnă insignele",
+      "legend_verified": "Declarația a fost verificată, iar contul este confirmat.",
+      "legend_unverified": "Nu am putut confirma declarația — încearcă să reverifici contul.",
+      "legend_stale": "Ultima verificare este învechită; reverifică pentru a actualiza starea.",
+      "legend_failed": "Verificarea a eșuat (vezi detaliile). Poți face clic pe „Reverifică” în cont pentru a încerca o nouă verificare."
     }
   },
   "package": {

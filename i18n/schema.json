@@ -1138,6 +1138,21 @@
             "verified_summary": {
               "type": "string"
             },
+            "legend_info_title": {
+              "type": "string"
+            },
+            "legend_verified": {
+              "type": "string"
+            },
+            "legend_unverified": {
+              "type": "string"
+            },
+            "legend_stale": {
+              "type": "string"
+            },
+            "legend_failed": {
+              "type": "string"
+            },
             "legend_aria_label": {
               "type": "string"
             },

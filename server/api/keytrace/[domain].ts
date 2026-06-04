@@ -78,6 +78,7 @@ const allowedProofMethods = new Set<KeytraceProofMethod>([
   'github',
   'npm',
   'mastodon',
+  'bluesky',
   'pgp',
   'other',
 ])

@@ -7,7 +7,7 @@ export type KeytraceProfile = {
 
 export type KeytraceVerificationStatus = 'verified' | 'unverified' | 'stale' | 'failed'
 
-export type KeytraceProofMethod = 'dns' | 'github' | 'npm' | 'mastodon' | 'pgp' | 'other'
+export type KeytraceProofMethod = 'dns' | 'github' | 'npm' | 'mastodon' | 'pgp' | 'bluesky' | 'other'
 
 export type KeytraceAccount = {
   platform: string

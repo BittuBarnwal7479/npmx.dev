@@ -17,6 +17,7 @@ const platformLabelMap: Record<string, string> = {
   github: 'GitHub',
   npm: 'npm',
   mastodon: 'Mastodon',
+  bluesky: 'Bluesky',
   discord: 'Discord',
   orcid: 'ORCID',
 }
@@ -25,6 +26,7 @@ const platformIconMap: Record<string, string> = {
   github: 'i-simple-icons:github',
   npm: 'i-simple-icons:npm',
   mastodon: 'i-simple-icons:mastodon',
+  bluesky: 'i-simple-icons:bluesky',
   discord: 'i-simple-icons:discord',
   orcid: 'i-simple-icons:orcid',
 }
@@ -34,6 +36,7 @@ const proofMethodLabelMap: Record<KeytraceAccount['proofMethod'], string> = {
   github: 'GitHub',
   npm: 'npm',
   mastodon: 'Mastodon',
+  bluesky: 'Bluesky',
   pgp: 'PGP',
   other: 'other',
 }

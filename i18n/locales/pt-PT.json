@@ -365,7 +365,12 @@
       "compose_text": "Olá, {'@'}{handle}! Já conheces o npmx.dev? É um navegador para o registo npm rápido, moderno e de código aberto.\nhttps://npmx.dev"
     },
     "linked_accounts": {
-      "status": {}
+      "status": {},
+      "legend_info_title": "O significado dos distintivos",
+      "legend_verified": "A reivindicação foi verificada e a conta foi confirmada.",
+      "legend_unverified": "Não foi possível confirmar a reivindicação — tente verificar novamente a conta.",
+      "legend_stale": "A última verificação está desatualizada; volte a verificar para atualizar o estado.",
+      "legend_failed": "A verificação falhou (consulte os detalhes). Pode clicar em \"Verificar novamente\" na conta para tentar uma nova verificação."
     }
   },
   "package": {

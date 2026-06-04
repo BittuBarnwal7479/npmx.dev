@@ -369,6 +369,11 @@
       },
       "title": "Verknüpfte Konten",
       "verified_summary": "Verifizierte Konten",
+      "legend_info_title": "Was die Badges bedeuten",
+      "legend_verified": "Der Nachweis wurde geprüft und das Konto bestätigt.",
+      "legend_unverified": "Der Nachweis konnte nicht bestätigt werden — versuche, das Konto erneut zu verifizieren.",
+      "legend_stale": "Die letzte Verifizierung ist veraltet; verifiziere erneut, um den Status zu aktualisieren.",
+      "legend_failed": "Die Verifizierung ist fehlgeschlagen (siehe Details). Du kannst beim Konto auf „\"Erneut verifizieren\" klicken, um es erneut zu prüfen.",
       "legend_aria_label": "Legende zum Verifizierungsstatus von Konten",
       "empty": "Keine verknüpften Konten"
     }
