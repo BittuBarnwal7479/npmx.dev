@@ -39,6 +39,7 @@
     "settings": "設定を開く",
     "compare": "比較を開く",
     "compare_from_package": "比較を開く（現在のパッケージを自動入力）",
+    "changelog": "changelogを開く",
     "navigate_results": "検索結果を移動",
     "go_to_result": "結果に移動",
     "open_code_view": "コードビューを開く",

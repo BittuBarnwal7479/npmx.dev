@@ -39,6 +39,7 @@
     "settings": "Open settings",
     "compare": "Open compare",
     "compare_from_package": "Open compare (prefilled with current package)",
+    "changelog": "Open changelog",
     "navigate_results": "Navigate results",
     "go_to_result": "Go to result",
     "open_code_view": "Open code view",

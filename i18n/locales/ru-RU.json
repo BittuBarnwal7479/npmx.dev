@@ -39,6 +39,7 @@
     "settings": "Открыть настройки",
     "compare": "Открыть сравнение",
     "compare_from_package": "Открыть сравнение (с текущим пакетом)",
+    "changelog": "Открыть changelog",
     "navigate_results": "Навигация по результатам",
     "go_to_result": "Перейти к результату",
     "open_code_view": "Открыть просмотр кода",

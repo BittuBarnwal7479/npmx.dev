@@ -121,6 +121,9 @@
         "compare_from_package": {
           "type": "string"
         },
+        "changelog": {
+          "type": "string"
+        },
         "navigate_results": {
           "type": "string"
         },
