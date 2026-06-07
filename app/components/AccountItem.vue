@@ -285,7 +285,7 @@ function formatDate(value: string): string {
           </div>
 
           <span
-            class="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-mono"
+            class="inline-flex items-center rounded-full border px-2 h-5 text-xs font-mono leading-5"
             :class="statusClasses"
           >
             {{ statusLabel }}

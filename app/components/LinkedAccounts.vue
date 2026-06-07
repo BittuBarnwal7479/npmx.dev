@@ -107,7 +107,7 @@ const verifiedCount = computed(
       <span
         v-for="item in statusLegend"
         :key="item.labelKey"
-        class="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-mono leading-[1.15]"
+        class="inline-flex items-center rounded-full border px-2 h-5 text-xs font-mono leading-5"
         :class="item.className"
       >
         {{ $t(item.labelKey) }}
