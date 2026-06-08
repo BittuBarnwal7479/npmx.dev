@@ -39,7 +39,6 @@
     "settings": "打开设置",
     "compare": "打开比较",
     "compare_from_package": "打开比较（使用当前包预填充）",
-    "changelog": "打开变更日志（针对新包）",
     "navigate_results": "导航结果",
     "go_to_result": "跳转到结果",
     "open_code_view": "打开代码视图",

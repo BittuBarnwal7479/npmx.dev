@@ -39,7 +39,6 @@
     "settings": "Ayarları aç",
     "compare": "Karşılaştırmayı aç",
     "compare_from_package": "Karşılaştırmayı aç (mevcut paketle doldurulmuş)",
-    "changelog": "Değişiklik günlüğünü aç (yeni paket için)",
     "navigate_results": "Sonuçlar arasında gezin",
     "go_to_result": "Sonuca git",
     "open_code_view": "Kod görünümünü aç",
