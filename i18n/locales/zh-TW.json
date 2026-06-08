@@ -36,7 +36,7 @@
     "settings": "開啟設定",
     "compare": "開啟比較",
     "compare_from_package": "開啟比較（預填目前套件）",
-    "changelog": "開啟 changelog",
+    "changelog": "開啟變更日誌（針對新套件）",
     "navigate_results": "瀏覽搜尋結果",
     "go_to_result": "前往搜尋結果",
     "open_code_view": "開啟程式碼檢視",
