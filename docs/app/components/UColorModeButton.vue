@@ -1,20 +1,26 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
 const appConfig = useAppConfig()
+const { t } = useDocusI18n()
+
+function themeLabel(key: string, fallback: string) {
+  const label = t(key)
+  return label && label !== key ? label : fallback
+}
 
 const modes = computed(() => [
   {
-    label: 'System',
+    label: themeLabel('settings.theme_system', 'System'),
     value: 'system',
     icon: appConfig.ui.icons.system,
   },
   {
-    label: 'Light',
+    label: themeLabel('settings.theme_light', 'Light'),
     value: 'light',
     icon: appConfig.ui.icons.light,
   },
   {
-    label: 'Dark',
+    label: themeLabel('settings.theme_dark', 'Dark'),
     value: 'dark',
     icon: appConfig.ui.icons.dark,
   },
