@@ -229,6 +229,9 @@
       "more_replies": "{count} আরো উত্তর... | {count} আরো উত্তর..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "সেটিংস",
     "tagline": "আপনার npmx অভিজ্ঞতা কাস্টমাইজ করুন",
@@ -331,7 +334,6 @@
     "cancel": "বাতিল করুন",
     "save": "সংরক্ষণ করুন",
     "edit": "সম্পাদনা করুন",
-    "error": "ত্রুটি",
     "view_on": {
       "npm": "npm এ দেখুন",
       "github": "GitHub এ দেখুন",
@@ -725,7 +727,8 @@
         "general_description": "Y অক্ষ ডাউনলোডের সংখ্যা নির্দেশ করে। X অক্ষ {start_date} থেকে {end_date} পর্যন্ত তারিখের পরিসর নির্দেশ করে, যেখানে সময়কাল হলো {granularity}। {estimation_notice} {packages_analysis}। {watermark}।",
         "facet_bar_general_description": "{packages} এর জন্য অনুভূমিক বার চার্ট, যেখানে {facet} ({description}) তুলনা করা হয়েছে। {facet_analysis} {watermark}।",
         "facet_bar_analysis": "{package_name} এর মান {value}।"
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "সাপ্তাহিক ডাউনলোড",
