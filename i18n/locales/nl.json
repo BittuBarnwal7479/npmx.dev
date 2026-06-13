@@ -331,6 +331,7 @@
     "cancel": "Annuleer",
     "save": "Opslaan",
     "edit": "Wijzigen",
+    "error": "Fout",
     "view_on": {
       "npm": "Bekijk op npm",
       "github": "Bekijk op GitHub",

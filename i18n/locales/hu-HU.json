@@ -173,6 +173,7 @@
     "cancel": "Mégse",
     "save": "Mentés",
     "edit": "Szerkesztés",
+    "error": "Hiba",
     "view_on": {
       "npm": "megtekintés npm-en",
       "github": "Megtekintés GitHubon"
