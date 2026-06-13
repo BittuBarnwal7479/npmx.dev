@@ -229,9 +229,6 @@
       "more_replies": "{count} আরো উত্তর... | {count} আরো উত্তর..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "সেটিংস",
     "tagline": "আপনার npmx অভিজ্ঞতা কাস্টমাইজ করুন",
