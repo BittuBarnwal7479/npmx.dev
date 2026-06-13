@@ -1390,10 +1390,7 @@
           "label": "GitHub Yıldızları",
           "description": "GitHub deposundaki yıldız sayısı"
         },
-        "githubForks": {
-          "label": "GitHub Fork'ları",
-          "description": "GitHub deposundaki fork sayısı"
-        },
+        "githubForks": {},
         "githubIssues": {
           "label": "GitHub Sorunları",
           "description": "GitHub deposundaki sorun sayısı"

@@ -1382,10 +1382,7 @@
           "label": "Stele GitHub",
           "description": "Numărul de stele din repository-ul GitHub"
         },
-        "githubForks": {
-          "label": "Fork-uri GitHub",
-          "description": "Numărul de fork-uri din repository-ul GitHub"
-        },
+        "githubForks": {},
         "githubIssues": {
           "label": "Probleme GitHub",
           "description": "Numărul de probleme din repository-ul GitHub"

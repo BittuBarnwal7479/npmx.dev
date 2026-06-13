@@ -1386,10 +1386,7 @@
           "label": "নিরাপত্তা ঝুঁকি",
           "description": "পরিচিত নিরাপত্তা দুর্বলতা"
         },
-        "githubStars": {
-          "label": "GitHub স্টার",
-          "description": "GitHub রিপোজিটরিতে স্টারের সংখ্যা"
-        },
+        "githubStars": {},
         "githubForks": {
           "label": "GitHub ফর্ক",
           "description": "GitHub রিপোজিটরিতে ফর্কের সংখ্যা"
