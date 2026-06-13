@@ -13,11 +13,11 @@
   "trademark_disclaimer": "npm, npm, Inc. এর একটি নিবন্ধিত ট্রেডমার্ক। এই সাইটটি npm, Inc. এর সাথে সংযুক্ত নয়।",
   "footer": {
     "about": "আমাদের সম্পর্কে",
+    "blog": "ব্লগ",
     "docs": "ডকুমেন্টেশন",
     "source": "সোর্স",
     "social": "সোশ্যাল",
     "chat": "চ্যাট",
-    "blog": "ব্লগ",
     "builders_chat": "নির্মাতাদের চ্যাট",
     "keyboard_shortcuts": "কীবোর্ড শর্টকাটস",
     "brand": "ব্র্যান্ড",
@@ -415,12 +415,9 @@
       "example": "উদাহরণ:",
       "native": "এটিকে {replacement} দিয়ে প্রতিস্থাপন করা যেতে পারে, যা Node {nodeVersion} থেকে উপলব্ধ।",
       "native_no_version": "এই প্যাকেজটি {replacement} দিয়ে প্রতিস্থাপন করা যেতে পারে।",
-      "simple": "{community} এই প্যাকেজটিকে অনাবশ্যক হিসাবে চিহ্নিত করেছে, পরামর্শ: {replacement}।",
-      "documented": "{community} এই প্যাকেজটিকে আরো ভাল পারফরম্যান্স অপশন হিসাবে চিহ্নিত করেছে।",
       "none": "এই প্যাকেজটি এখন অনাবশ্যক হিসাবে চিহ্নিত, এবং এর কার্যকরিতা সমস্ত ইঞ্জিনে নেটিভভাবে উপলব্ধ হওয়ার সম্ভাবনা আছে।",
       "learn_more": "আরো জানুন",
       "learn_more_above": "আরো জানুন উপরে।",
-      "community": "কমিউনিটি",
       "consider_no_dep": "+ কোন নির্ভরতা বিবেচনা?"
     },
     "stats": {
@@ -565,7 +562,6 @@
       "view_all": "{count}টি ভার্সন দেখুন | সব {count}টি ভার্সন দেখুন",
       "view_all_versions": "সব ভার্সন দেখুন",
       "distribution_title": "Semver গ্রুপ",
-      "distribution_modal_title": "ভার্সনসমূহ",
       "distribution_range_date_same_year": "{from} থেকে {to}, {endYear}",
       "distribution_range_date_multiple_years": "{from}, {startYear} থেকে {to}, {endYear}",
       "grouping_major": "মেজর",
@@ -727,8 +723,7 @@
         "general_description": "Y অক্ষ ডাউনলোডের সংখ্যা নির্দেশ করে। X অক্ষ {start_date} থেকে {end_date} পর্যন্ত তারিখের পরিসর নির্দেশ করে, যেখানে সময়কাল হলো {granularity}। {estimation_notice} {packages_analysis}। {watermark}।",
         "facet_bar_general_description": "{packages} এর জন্য অনুভূমিক বার চার্ট, যেখানে {facet} ({description}) তুলনা করা হয়েছে। {facet_analysis} {watermark}।",
         "facet_bar_analysis": "{package_name} এর মান {value}।"
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "সাপ্তাহিক ডাউনলোড",
@@ -1437,8 +1432,6 @@
     "file_changes": "ফাইল পরিবর্তন",
     "files_count": "{count}টি ফাইল | {count}টি ফাইল",
     "lines_hidden": "{count}টি লাইন লুকানো | {count}টি লাইন লুকানো",
-    "file_too_large": "তুলনার জন্য ফাইলটি খুব বড়",
-    "file_size_warning": "{size} তুলনার 250KB সীমা অতিক্রম করেছে",
     "compare_versions": "ডিফ",
     "compare_versions_title": "সর্বশেষ সংস্করণের সাথে তুলনা করুন",
     "comparing_versions_label": "সংস্করণ তুলনা করা হচ্ছে...",
