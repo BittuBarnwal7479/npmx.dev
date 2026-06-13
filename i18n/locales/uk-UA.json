@@ -1385,6 +1385,10 @@
           "label": "Зірки GitHub",
           "description": "Кількість зірок у репозиторії GitHub"
         },
+        "githubForks": {
+          "label": "Форки GitHub",
+          "description": "Кількість форків у репозиторії GitHub"
+        },
         "githubIssues": {
           "label": "Issues GitHub",
           "description": "Кількість issues у репозиторії GitHub"

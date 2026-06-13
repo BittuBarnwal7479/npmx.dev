@@ -1385,6 +1385,10 @@
           "label": "GitHub-stjerner",
           "description": "Antall stjerner på GitHub-repositoriet"
         },
+        "githubForks": {
+          "label": "GitHub-forker",
+          "description": "Antall forkede på GitHub-repositoriet"
+        },
         "githubIssues": {
           "label": "GitHub-saker",
           "description": "Antall saker på GitHub-repositoriet"

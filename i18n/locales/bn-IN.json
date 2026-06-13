@@ -1390,6 +1390,10 @@
           "label": "GitHub স্টার",
           "description": "GitHub রিপোজিটরিতে স্টারের সংখ্যা"
         },
+        "githubForks": {
+          "label": "GitHub ফর্ক",
+          "description": "GitHub রিপোজিটরিতে ফর্কের সংখ্যা"
+        },
         "githubIssues": {
           "label": "GitHub ইস্যু",
           "description": "GitHub রিপোজিটরিতে ইস্যুর সংখ্যা"
