@@ -229,6 +229,9 @@
       "more_replies": "{count} meer reactie... | {count} meer reacties..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "instellingen",
     "tagline": "Pas uw npmx.dev ervaring aan",
@@ -331,7 +334,6 @@
     "cancel": "Annuleer",
     "save": "Opslaan",
     "edit": "Wijzigen",
-    "error": "Fout",
     "view_on": {
       "npm": "Bekijk op npm",
       "github": "Bekijk op GitHub",
@@ -367,6 +369,9 @@
       "message": "Het lijkt erop dat ze npmx nog niet gebruiken. Wilt u ze hierop wijzen",
       "share_button": "Deel op Bluesky",
       "compose_text": "Hallo {'@'}{handle}! Hebt u npmx.dev al bekeken? Het is een browser voor het npm-register die snel, modern en open source is.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -710,7 +715,8 @@
         "general_description": "De Y-as toont het aantal downloads. De X-as toont de periode, van {start_date} tot {end_date}, met een {granularity} tijdsinterval. {estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": " Horizontaal staafdiagram voor: {packages}, ter vergelijking van {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} heeft een waarde van {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Wekelijkse Downloads",

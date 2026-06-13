@@ -130,6 +130,9 @@
       "more_replies": "{count} और जवाब... | {count} और जवाब..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "सेटिंग्स",
     "tagline": "अपने npmx अनुभव को अनुकूलित करें",
@@ -227,7 +230,6 @@
     "cancel": "रद्द करें",
     "save": "सहेजें",
     "edit": "संपादित करें",
-    "error": "त्रुटि",
     "view_on": {
       "npm": "npm पर देखें",
       "github": "GitHub पर देखें",
@@ -246,7 +248,10 @@
     "expand": "विस्तृत करें"
   },
   "profile": {
-    "invite": {}
+    "invite": {},
+    "linked_accounts": {
+      "status": {}
+    }
   },
   "package": {
     "not_found": "पैकेज नहीं मिला",
@@ -543,7 +548,8 @@
         "general_description": "Y अक्ष डाउनलोड की संख्या दर्शाता है। X अक्ष {start_date} से {end_date} तक की तारीख सीमा दर्शाता है, जिसमें {granularity} समय अवधि है।{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "इनके लिए क्षैतिज बार चार्ट: {packages}, {facet} की तुलना करते हुए ({description})। {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} का मान {value} है।"
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "साप्ताहिक डाउनलोड्स",

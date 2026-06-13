@@ -228,6 +228,9 @@
       "more_replies": "{count} repostare în plus... | {count} repostări în plus..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "setări",
     "tagline": "personalizează-ți experiența cu npmx",
@@ -328,7 +331,6 @@
     "cancel": "Anulează",
     "save": "Salvează",
     "edit": "Editează",
-    "error": "Eroare",
     "view_on": {
       "npm": "Vizualizează pe npm",
       "github": "Vizualizează pe GitHub",
@@ -364,6 +366,9 @@
       "message": "Se pare că încă nu folosesc npmx. Vrei să le spui despre asta?",
       "share_button": "Partajează pe Bluesky",
       "compose_text": "Salut {'@'}{handle}! Ai vizitat deja npmx.dev? Este un browser pentru registrul npm, rapid, modern și open-source.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -700,7 +705,8 @@
         "general_description": "Axa Y reprezintă numărul de descărcări. Axa X reprezintă intervalul de date, de la {start_date} până la {end_date}, cu o perioadă de timp de {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Diagramă cu bare orizontale pentru: {packages}, comparând {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} are valoarea {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Descărcări Săptămânale",

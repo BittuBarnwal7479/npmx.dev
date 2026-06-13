@@ -228,6 +228,9 @@
       "more_replies": "{count} svar til... | {count} svar til..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "innstillinger",
     "tagline": "tilpass din npmx-opplevelse",
@@ -328,7 +331,6 @@
     "cancel": "Avbryt",
     "save": "Lagre",
     "edit": "Rediger",
-    "error": "Feil",
     "view_on": {
       "npm": "vis på npm",
       "github": "Vis på GitHub",
@@ -364,6 +366,9 @@
       "message": "Det ser ikke ut som de bruker npmx ennå. Vil du fortelle dem om det?",
       "share_button": "Del på Bluesky",
       "compose_text": "Hei {'@'}{handle}! Har du sjekket ut npmx.dev ennå? Det er en leser for npm-registeret som er rask, moderne og åpen kildekode.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -703,7 +708,8 @@
         "general_description": "Y-aksen representerer antall nedlastinger. X-aksen representerer datoområdet, fra {start_date} til {end_date}, med en {granularity} tidsperiode.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Horisontalt stolpediagram for: {packages}, sammenligner {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} har en verdi på {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Ukentlige nedlastinger",

@@ -131,6 +131,9 @@
       "more_replies": "{count} još odgovor... | {count} još odgovora... | {count} još odgovora..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "podešavanja",
     "tagline": "prilagodite svoje npmx iskustvo",
@@ -228,7 +231,6 @@
     "cancel": "Otkažite",
     "save": "Sačuvajte",
     "edit": "Uredite",
-    "error": "Greška",
     "view_on": {
       "npm": "pogledajte na npm-u",
       "github": "Pogledajte na GitHub-u",
@@ -261,6 +263,9 @@
       "message": "Izgleda da još uvek ne koriste npmx. Želite li da im kažete nešto više o tome?",
       "share_button": "Podelite na Bluesky-u",
       "compose_text": "Hej {'@'}{handle}! Da li ste već pogledali npmx.dev? To je pretraživač za npm registar koji je brz, moderan i otvorenog koda.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -558,7 +563,8 @@
         "general_description": "Y osa predstavlja broj preuzimanja. X osa predstavlja opseg datuma, od {start_date} do {end_date}, sa vremenskim periodom {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Horizontalni stubičasti grafikon za: {packages}, poređenje {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} ima vrednost {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Nedeljna preuzimanja",

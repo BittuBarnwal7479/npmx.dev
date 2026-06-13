@@ -229,6 +229,9 @@
       "more_replies": "noch {count} Antwort… | noch {count} Antworten…"
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "einstellungen",
     "tagline": "Passe npmx an deine Vorlieben an",
@@ -331,7 +334,6 @@
     "cancel": "Abbrechen",
     "save": "Speichern",
     "edit": "Bearbeiten",
-    "error": "Fehler",
     "view_on": {
       "npm": "Auf npm ansehen",
       "github": "Auf GitHub ansehen",
@@ -367,6 +369,9 @@
       "message": "Es sieht nicht so aus, als ob sie npmx schon benutzen. Möchtest du ihnen davon erzählen?",
       "share_button": "Auf Bluesky teilen",
       "compose_text": "Hey {'@'}{handle}! Hast du schon npmx.dev ausprobiert? Es ist ein Browser für die npm Registry, der schnell, modern und Open-Source ist.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -709,7 +714,8 @@
         "general_description": "Die Y-Achse stellt die Anzahl der Downloads dar. Die X-Achse stellt den Datumsbereich dar, von {start_date} bis {end_date}, mit einem {granularity}en Zeitraum.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Horizontales Balkendiagramm für: {packages}, Vergleich von {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} hat einen Wert von {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Wöchentliche Downloads",

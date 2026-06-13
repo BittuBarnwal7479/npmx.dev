@@ -226,6 +226,9 @@
       "more_replies": "{count} réponse supplémentaire... | {count} réponses supplémentaires..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "paramètres",
     "tagline": "personnalisez votre expérience npmx",
@@ -328,7 +331,6 @@
     "cancel": "Annuler",
     "save": "Enregistrer",
     "edit": "Modifier",
-    "error": "Erreur",
     "view_on": {
       "npm": "voir sur npm",
       "github": "Voir sur GitHub",
@@ -364,6 +366,9 @@
       "message": "Il semblerait qu'ils n'utilisent pas encore npmx. Vous voulez leur en parler ?",
       "share_button": "Partager sur Bluesky",
       "compose_text": "Salut {'@'}{handle} ! As-tu déjà testé npmx.dev ? C'est un navigateur pour le registre npm : rapide, moderne et open source.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {

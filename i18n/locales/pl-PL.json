@@ -127,6 +127,9 @@
       "more_replies": "jeszcze {count} odpowiedź… | jeszcze {count} odpowiedzi… | jeszcze {count} odpowiedzi…"
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "ustawienia",
     "tagline": "dostosuj npmx do siebie",
@@ -210,7 +213,6 @@
     "cancel": "Anuluj",
     "save": "Zapisz",
     "edit": "Edytuj",
-    "error": "Błąd",
     "view_on": {
       "npm": "zobacz na npm",
       "github": "Zobacz w GitHub",
@@ -241,6 +243,9 @@
       "message": "Wygląda na to, że jeszcze nie korzystają z npmx. Chcesz ich powiadomić?",
       "share_button": "Podziel się na Bluesky",
       "compose_text": "Hej {'@'}{handle}! Czy znasz już npmx.dev? To szybka, nowoczesna przeglądarka rejestru npm z otwartym kodem źródłowym.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -513,7 +518,8 @@
         "general_description": "Oś Y przedstawia ilość pobrań. Oś X przedstawia zakres dat, od {start_date} do {end_date}, z jednostką czasu {granularity}. {estimation_notice} {package_analysis}. {watermark}",
         "facet_bar_general_description": "Poziomy wykres słupkowy dla: {packages}, porównuje {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} ma wartość {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Pobrania tygodniowe",

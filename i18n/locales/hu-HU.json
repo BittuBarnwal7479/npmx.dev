@@ -98,6 +98,9 @@
     "author": {},
     "atproto": {}
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "beállítások",
     "tagline": "szabd személyre az npmx élményed",
@@ -173,7 +176,6 @@
     "cancel": "Mégse",
     "save": "Mentés",
     "edit": "Szerkesztés",
-    "error": "Hiba",
     "view_on": {
       "npm": "megtekintés npm-en",
       "github": "Megtekintés GitHubon"
@@ -194,6 +196,9 @@
       "message": "Úgy tűnik, hogy még nem használja az npmx-et. Szeretnéd megtudatni vele?",
       "share_button": "Megosztás a Bluesky-on",
       "compose_text": "Halló {'@'}{handle}! Már próbáltad az npmx.dev-et? Egy gyors, modern és nyílt forráskódú böngésző az npm regiszterhez.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -460,7 +465,8 @@
         "compare": "Csomag letöltési összehasonlítás vonaldiagram: {packages}.",
         "single_package": "A(z) {package} csomag letöltési vonaldiagramja.",
         "general_description": "Az Y tengely a letöltések számát ábrázolja. Az X tengely a dátumtartományt ábrázolja, {start_date} -től {end_date} -ig, {granularity} időszakkal.{estimation_notice} {packages_analysis}. {watermark}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Heti letöltések",

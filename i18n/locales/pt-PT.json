@@ -228,6 +228,9 @@
       "more_replies": "mais {count} resposta... | mais {count} respostas..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "definições",
     "tagline": "personaliza a tua experiência npmx",
@@ -328,7 +331,6 @@
     "cancel": "Cancelar",
     "save": "Guardar",
     "edit": "Editar",
-    "error": "Erro",
     "view_on": {
       "npm": "Ver no npm",
       "github": "Ver no GitHub",
@@ -364,6 +366,9 @@
       "message": "Parece que ainda não estão a usar o npmx. Queres contar-lhes sobre isso?",
       "share_button": "Partilhar no Bluesky",
       "compose_text": "Olá, {'@'}{handle}! Já conheces o npmx.dev? É um navegador para o registo npm rápido, moderno e de código aberto.\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -692,7 +697,8 @@
         "general_description": "O eixo Y representa o número de transferências. O eixo X representa o intervalo de datas, de {start_date} a {end_date}, com periodicidade {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Gráfico de barras horizontais para: {packages}, comparando {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} tem um valor de {value}."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "Transferências Semanais",
