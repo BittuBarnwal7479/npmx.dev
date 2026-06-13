@@ -358,6 +358,7 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
+    "error": "Error",
     "view_on": {
       "npm": "View on npm",
       "github": "View on GitHub",
@@ -408,7 +409,7 @@
       "legend_aria_label": "Account verification status legend",
       "legend_info_title": "What the badges mean",
       "legend_verified": "The claim has been checked and the account is confirmed.",
-      "legend_unverified": "We couldn't confirm the claim — try re-verifying the account.",
+      "legend_unverified": "We couldn't confirm the claim - try re-verifying the account.",
       "legend_stale": "The last verification is outdated; re-verify to refresh the status.",
       "legend_failed": "Verification failed (see details). You can click \"Re-verify\" on the account to attempt a fresh check.",
       "empty": "No linked accounts"
