@@ -224,9 +224,6 @@
       "more_replies": "ještě {count} odpověď… | ještě {count} odpovědi… | ještě {count} odpovědí…"
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "nastavení",
     "tagline": "přizpůsobte si své npmx",
@@ -664,8 +661,7 @@
         "general_description": "Osa Y představuje počet stažení. Osa X představuje časový rozsah od {start_date} do {end_date} s časovým obdobím {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Horizontální sloupcový graf pro: {packages}, porovnávající {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} má hodnotu {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Týdenní stažení",

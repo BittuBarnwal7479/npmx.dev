@@ -229,9 +229,6 @@
       "more_replies": "noch {count} Antwort… | noch {count} Antworten…"
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "einstellungen",
     "tagline": "Passe npmx an deine Vorlieben an",
@@ -369,23 +366,6 @@
       "message": "Es sieht nicht so aus, als ob sie npmx schon benutzen. Möchtest du ihnen davon erzählen?",
       "share_button": "Auf Bluesky teilen",
       "compose_text": "Hey {'@'}{handle}! Hast du schon npmx.dev ausprobiert? Es ist ein Browser für die npm Registry, der schnell, modern und Open-Source ist.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {
-        "verified": "Verifiziert",
-        "unverified": "Nicht verifiziert",
-        "stale": "Veraltet",
-        "failed": "Fehlgeschlagen"
-      },
-      "title": "Verknüpfte Konten",
-      "verified_summary": "Verifizierte Konten",
-      "legend_aria_label": "Legende zum Verifizierungsstatus von Konten",
-      "legend_info_title": "Was die Badges bedeuten",
-      "legend_verified": "Der Nachweis wurde geprüft und das Konto bestätigt.",
-      "legend_unverified": "Der Nachweis konnte nicht bestätigt werden — versuche, das Konto erneut zu verifizieren.",
-      "legend_stale": "Die letzte Verifizierung ist veraltet; verifiziere erneut, um den Status zu aktualisieren.",
-      "legend_failed": "Die Verifizierung ist fehlgeschlagen (siehe Details). Du kannst beim Konto auf „\"Erneut verifizieren\" klicken, um es erneut zu prüfen.",
-      "empty": "Keine verknüpften Konten"
     }
   },
   "package": {
@@ -728,8 +708,7 @@
         "general_description": "Die Y-Achse stellt die Anzahl der Downloads dar. Die X-Achse stellt den Datumsbereich dar, von {start_date} bis {end_date}, mit einem {granularity}en Zeitraum.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Horizontales Balkendiagramm für: {packages}, Vergleich von {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} hat einen Wert von {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Wöchentliche Downloads",

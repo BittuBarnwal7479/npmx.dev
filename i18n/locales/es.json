@@ -229,9 +229,6 @@
       "more_replies": "{count} respuesta más... | {count} respuestas más..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "configuración",
     "tagline": "personaliza tu experiencia en npmx",
@@ -369,9 +366,6 @@
       "message": "Parece que aún no usa npmx. ¿Quieres contárselo?",
       "share_button": "Compartir en Bluesky",
       "compose_text": "¡Hola {'@'}{handle}! ¿Has probado ya npmx.dev? Es un navegador para el registro de npm rápido, moderno y de código abierto.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -713,8 +707,7 @@
         "general_description": "El eje Y representa el número de descargas. El eje X representa el rango de fechas, desde {start_date} hasta {end_date}, con un período de tiempo {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Gráfico de barras horizontal para: {packages}, comparando {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} tiene un valor de {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Descargas Semanales",
