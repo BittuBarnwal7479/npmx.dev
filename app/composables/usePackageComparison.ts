@@ -172,8 +172,7 @@ export function usePackageComparison(packageNames: MaybeRefOrGetter<string[]>) {
               isGitHub
                 ? $fetch<{ repo: { stars?: number; forks?: number } }>(
                     `https://ungh.cc/repos/${repoInfo.owner}/${repoInfo.repo}`,
-                  )
-                    .catch(() => null)
+                  ).catch(() => null)
                 : Promise.resolve(null),
               isGitHub
                 ? $fetch<{ issues: number | null }>(
