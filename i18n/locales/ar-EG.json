@@ -82,6 +82,7 @@
     "cancel": "إلغاء",
     "save": "حفظ",
     "edit": "تعديل",
+    "error": "خطأ",
     "view_on": {
       "gitlab": "عرض على GitLab",
       "bitbucket": "عرض على Bitbucket",
@@ -112,9 +113,7 @@
       "message": "انضم إليّ على npmx",
       "share_button": "دعوة صديق",
       "compose_text": "جرّب npmx، المتصفح السريع لحزم npm!"
-    },
-    "likes_error": "تعذّر تحميل الحزم المُعجَب بها.",
-    "likes_empty": "لا توجد حزم مُعجَب بها بعد."
+    }
   },
   "package": {
     "size_increase": {

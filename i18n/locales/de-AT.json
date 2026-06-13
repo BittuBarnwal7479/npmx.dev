@@ -21,28 +21,5 @@
     "instant_search_turn_on": "Schnellsuche aktivieren",
     "instant_search_turn_off": "Schnellsuche deaktivieren",
     "instant_search_advisory": "Die Schnellsuche sendet bei jedem Tastendruck eine Anfrage."
-  },
-  "profile": {
-    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
-    "likes_empty": "Noch keine gelikten Pakete.",
-    "avatar_alt": "Profilavatar",
-    "unknown_profile": "Unbekanntes Profil",
-    "linked_accounts": {
-      "status": {
-        "verified": "Verifiziert",
-        "unverified": "Nicht verifiziert",
-        "stale": "Veraltet",
-        "failed": "Fehlgeschlagen"
-      },
-      "title": "Verknüpfte Konten",
-      "verified_summary": "Verifizierte Konten",
-      "legend_aria_label": "Legende zum Verifizierungsstatus von Konten",
-      "empty": "Keine verknüpften Konten",
-      "legend_info_title": "Bedeutung der Abzeichen",
-      "legend_verified": "Die Angabe wurde überprüft und das Konto wurde bestätigt.",
-      "legend_unverified": "Die Angabe konnte nicht bestätigt werden – versuche, das Konto erneut zu verifizieren.",
-      "legend_stale": "Die letzte Verifizierung ist veraltet; verifiziere das Konto erneut, um den Status zu aktualisieren.",
-      "legend_failed": "Die Verifizierung ist fehlgeschlagen (siehe Details). Du kannst beim Konto auf „Erneut verifizieren“ klicken, um einen neuen Prüfversuch zu starten."
-    }
   }
 }

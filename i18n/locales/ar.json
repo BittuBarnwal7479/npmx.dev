@@ -155,9 +155,7 @@
     }
   },
   "profile": {
-    "invite": {},
-    "likes_error": "تعذر تحميل الحزم المفضلة.",
-    "likes_empty": "لا توجد حزم مفضلة بعد."
+    "invite": {}
   },
   "package": {
     "not_found": "لم يتم العثور على الحزمة",

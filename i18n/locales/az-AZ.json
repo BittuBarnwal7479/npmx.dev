@@ -193,6 +193,7 @@
     "cancel": "Ləğv et",
     "save": "Saxla",
     "edit": "Redaktə et",
+    "error": "Xəta",
     "view_on": {
       "npm": "npm-də bax",
       "github": "GitHub-da bax"
@@ -213,9 +214,7 @@
       "message": "Deyəsən onlar hələ npmx istifadə etmirlər. Onlara bu barədə demək istəyirsiniz?",
       "share_button": "Bluesky-da paylaş",
       "compose_text": "Salam {'@'}{handle}! npmx.dev-i yoxlamısan? Bu, npm reyestri üçün sürətli, müasir və açıq mənbəli brauzerdir.\nhttps://npmx.dev"
-    },
-    "likes_error": "Bəyənilən paketlər yüklənə bilmədi.",
-    "likes_empty": "Hələ bəyənilən paket yoxdur."
+    }
   },
   "package": {
     "not_found": "Paket Tapılmadı",

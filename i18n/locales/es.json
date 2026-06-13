@@ -331,6 +331,7 @@
     "cancel": "Cancelar",
     "save": "Guardar",
     "edit": "Editar",
+    "error": "Error",
     "view_on": {
       "npm": "ver en npm",
       "github": "Ver en GitHub",
@@ -366,9 +367,7 @@
       "message": "Parece que aún no usa npmx. ¿Quieres contárselo?",
       "share_button": "Compartir en Bluesky",
       "compose_text": "¡Hola {'@'}{handle}! ¿Has probado ya npmx.dev? Es un navegador para el registro de npm rápido, moderno y de código abierto.\nhttps://npmx.dev"
-    },
-    "likes_error": "No se pudieron cargar los paquetes que te gustan.",
-    "likes_empty": "Aún no hay paquetes que te gusten."
+    }
   },
   "package": {
     "not_found": "Paquete no encontrado",

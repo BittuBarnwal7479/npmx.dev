@@ -43,9 +43,7 @@
     "invite": {
       "message": "Parece que aún no usa npmx. ¿Quieres contarle?",
       "compose_text": "¡Hola {'@'}{handle}! ¿Has probado ya npmx.dev? Es un navegador para el registro de npm rápido, moderno y de código abierto.\nhttps://npmx.dev"
-    },
-    "likes_error": "No se pudieron cargar los paquetes favoritos.",
-    "likes_empty": "Aún no hay paquetes favoritos."
+    }
   },
   "package": {
     "readme": {

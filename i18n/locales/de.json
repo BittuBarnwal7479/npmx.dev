@@ -331,6 +331,7 @@
     "cancel": "Abbrechen",
     "save": "Speichern",
     "edit": "Bearbeiten",
+    "error": "Fehler",
     "view_on": {
       "npm": "Auf npm ansehen",
       "github": "Auf GitHub ansehen",
@@ -358,8 +359,6 @@
     "website": "Website",
     "website_placeholder": "https://beispiel.de",
     "likes": "Likes",
-    "likes_error": "Gelikte Pakete konnten nicht geladen werden.",
-    "likes_empty": "Noch keine gelikten Pakete.",
     "seo_title": "{handle} - npmx",
     "seo_description": "npmx-Profil von {handle}",
     "not_found": "Profil nicht gefunden",

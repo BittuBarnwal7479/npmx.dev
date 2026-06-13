@@ -366,9 +366,7 @@
       "message": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı",
       "share_button": "Paylaş",
       "compose_text": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı: {url}"
-    },
-    "likes_error": "Beğenilen paketler yüklenemedi.",
-    "likes_empty": "Henüz beğenilen paket yok."
+    }
   },
   "package": {
     "not_found": "Paket Bulunamadı",

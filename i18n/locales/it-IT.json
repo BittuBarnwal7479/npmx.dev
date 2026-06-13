@@ -155,9 +155,7 @@
     }
   },
   "profile": {
-    "invite": {},
-    "likes_error": "Impossibile caricare i pacchetti preferiti.",
-    "likes_empty": "Nessun pacchetto preferito ancora."
+    "invite": {}
   },
   "package": {
     "not_found": "Pacchetto Non Trovato",

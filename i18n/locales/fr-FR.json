@@ -363,9 +363,7 @@
       "message": "Il semblerait qu'ils n'utilisent pas encore npmx. Vous voulez leur en parler ?",
       "share_button": "Partager sur Bluesky",
       "compose_text": "Salut {'@'}{handle} ! As-tu déjà testé npmx.dev ? C'est un navigateur pour le registre npm : rapide, moderne et open source.\nhttps://npmx.dev"
-    },
-    "likes_error": "Impossible de charger les paquets aimés.",
-    "likes_empty": "Aucun paquet aimé pour le moment."
+    }
   },
   "package": {
     "not_found": "Paquet introuvable",

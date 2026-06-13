@@ -45,9 +45,5 @@
       "error": "Failed to load organisations",
       "empty": "No organisations found"
     }
-  },
-  "profile": {
-    "likes_error": "Could not load liked packages.",
-    "likes_empty": "No liked packages yet."
   }
 }

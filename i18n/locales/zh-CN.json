@@ -363,9 +363,7 @@
       "message": "看起来他们还没有使用 npmx，去邀请一下？",
       "share_button": "分享到 Bluesky",
       "compose_text": "嗨 {'@'}{handle}！您用过 npmx.dev 吗？它是一个快速、现代且开源的 npm registry 浏览器。\nhttps://npmx.dev"
-    },
-    "likes_error": "无法加载喜欢的包。",
-    "likes_empty": "还没有喜欢的包。"
+    }
   },
   "package": {
     "not_found": "未找到包",
