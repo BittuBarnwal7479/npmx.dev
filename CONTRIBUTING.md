@@ -447,6 +447,8 @@ The command palette is a first-class navigation surface. When you add a new user
 | `package-version` | `/package/:org?/:name/v/:version` | `org?`, `name`, `version` |
 | `code`            | `/package-code/:path+`            | `path` (array)            |
 | `docs`            | `/package-docs/:path+`            | `path` (array)            |
+| `changelog`       | `/package-changelog/:path+`       | `path` (array)            |
+| `timeline`        | `/package-timeline/:path+`        | `path` (array)            |
 | `org`             | `/org/:org`                       | `org`                     |
 | `~username`       | `/~:username`                     | `username`                |
 | `~username-orgs`  | `/~:username/orgs`                | `username`                |
