@@ -1394,7 +1394,6 @@
           "label": "GitHub Stars",
           "description": "GitHubリポジトリのスター数"
         },
-        "githubForks": {},
         "githubIssues": {
           "label": "GitHub Issues",
           "description": "GitHubリポジトリのIssues数"

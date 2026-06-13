@@ -1385,7 +1385,6 @@
           "label": "Зірки GitHub",
           "description": "Кількість зірок у репозиторії GitHub"
         },
-        "githubForks": {},
         "githubIssues": {
           "label": "Issues GitHub",
           "description": "Кількість issues у репозиторії GitHub"

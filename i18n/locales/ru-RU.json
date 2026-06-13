@@ -1389,7 +1389,6 @@
           "label": "Звёзды GitHub",
           "description": "Количество звёзд у GitHub-репозитория"
         },
-        "githubForks": {},
         "githubIssues": {
           "label": "Тикеты GitHub",
           "description": "Количество тикетов в GitHub-репозитории"

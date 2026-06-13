@@ -1382,7 +1382,6 @@
           "label": "Stele GitHub",
           "description": "Numărul de stele din repository-ul GitHub"
         },
-        "githubForks": {},
         "githubIssues": {
           "label": "Probleme GitHub",
           "description": "Numărul de probleme din repository-ul GitHub"

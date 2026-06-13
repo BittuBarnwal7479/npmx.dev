@@ -1392,7 +1392,6 @@
           "label": "GitHub Sterren",
           "description": "Aantal sterren van een GitHub repository"
         },
-        "githubForks": {},
         "githubIssues": {
           "label": "GitHub Issues",
           "description": "Aantal issues van een GitHub repository"
