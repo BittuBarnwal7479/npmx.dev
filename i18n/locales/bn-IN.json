@@ -13,11 +13,11 @@
   "trademark_disclaimer": "npm, npm, Inc. এর একটি নিবন্ধিত ট্রেডমার্ক। এই সাইটটি npm, Inc. এর সাথে সংযুক্ত নয়।",
   "footer": {
     "about": "আমাদের সম্পর্কে",
+    "blog": "ব্লগ",
     "docs": "ডকুমেন্টেশন",
     "source": "সোর্স",
     "social": "সোশ্যাল",
     "chat": "চ্যাট",
-    "blog": "ব্লগ",
     "builders_chat": "নির্মাতাদের চ্যাট",
     "keyboard_shortcuts": "কীবোর্ড শর্টকাটস",
     "brand": "ব্র্যান্ড",
@@ -229,6 +229,9 @@
       "more_replies": "{count} আরো উত্তর... | {count} আরো উত্তর..."
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "সেটিংস",
     "tagline": "আপনার npmx অভিজ্ঞতা কাস্টমাইজ করুন",
@@ -331,7 +334,6 @@
     "cancel": "বাতিল করুন",
     "save": "সংরক্ষণ করুন",
     "edit": "সম্পাদনা করুন",
-    "error": "ত্রুটি",
     "view_on": {
       "npm": "npm এ দেখুন",
       "github": "GitHub এ দেখুন",
@@ -367,6 +369,9 @@
       "message": "তারা এখনও npmx ব্যবহার করছে বলে মনে হচ্ছে না। এটা সম্পর্কে তাদের বলতে চান?",
       "share_button": "Bluesky এ শেয়ার করুন",
       "compose_text": "আরে {'@'}{handle}! আপনি কি এখনও npmx.dev চেক আউট করেছেন? এটি npm রেজিস্ট্রির জন্য একটি ব্রাউজার যা দ্রুত, আধুনিক এবং ওপেন সোর্স।\nhttps://npmx.dev"
+    },
+    "linked_accounts": {
+      "status": {}
     }
   },
   "package": {
@@ -405,7 +410,6 @@
       "none": "এই প্যাকেজটি এখন অনাবশ্যক হিসাবে চিহ্নিত, এবং এর কার্যকরিতা সমস্ত ইঞ্জিনে নেটিভভাবে উপলব্ধ হওয়ার সম্ভাবনা আছে।",
       "learn_more": "আরো জানুন",
       "learn_more_above": "আরো জানুন উপরে।",
-      "community": "কমিউনিটি",
       "consider_no_dep": "+ কোন নির্ভরতা বিবেচনা?"
     },
     "stats": {
@@ -462,10 +466,10 @@
       "top_rank_link_label": "পছন্দ লিডারবোর্ড দেখুন. এই প্যাকেজটি #{rank} র‌্যাঙ্ক করা হয়েছে."
     },
     "docs": {
-      "not_available": "ডকুমেন্টেশন উপলব্ধ নেই",
-      "not_available_detail": "আমরা এই ভার্সনের জন্য ডকুমেন্টেশন তৈরি করতে পারিনি।",
       "contents": "বিষয়বস্তু",
       "default_not_available": "এই ভার্সনের জন্য ডকুমেন্টেশন উপলব্ধ নয়।",
+      "not_available": "ডকুমেন্টেশন উপলব্ধ নেই",
+      "not_available_detail": "আমরা এই ভার্সনের জন্য ডকুমেন্টেশন তৈরি করতে পারিনি।",
       "page_title": "API ডকুমেন্টেশন - npmx",
       "page_title_name": "{name} ডকুমেন্টেশন - npmx",
       "page_title_version": "{name} ডকুমেন্টেশন - npmx",
@@ -476,9 +480,9 @@
       "title": "শুরু করুন",
       "pm_label": "প্যাকেজ ম্যানেজার",
       "copy_command": "ইনস্টল কমান্ড কপি করুন",
-      "view_types": "{package} দেখুন",
       "copy_dev_command": "ডেভ ইনস্টল কমান্ড কপি করুন",
-      "dev_dependency_hint": "সাধারণত ডেভ ডিপেনডেন্সি হিসেবে ইনস্টল করা হয়"
+      "dev_dependency_hint": "সাধারণত ডেভ ডিপেনডেন্সি হিসেবে ইনস্টল করা হয়",
+      "view_types": "{package} দেখুন"
     },
     "create": {
       "title": "নতুন প্রকল্প তৈরি করুন",
@@ -492,6 +496,7 @@
     "readme": {
       "title": "রিডমি",
       "no_readme": "README উপলব্ধ নেই।",
+      "toc_title": "আউটলাইন",
       "callout": {
         "note": "দ্রষ্টব্য",
         "tip": "টিপ",
@@ -499,7 +504,6 @@
         "warning": "সতর্কতা",
         "caution": "সতর্কতা"
       },
-      "toc_title": "আউটলাইন",
       "copy_as_markdown": "মার্কডাউন হিসাবে README কপি করুন",
       "error_loading": "README বিশদ লোড করতে ব্যর্থ হয়েছে৷"
     },
@@ -528,10 +532,10 @@
     "compatibility": "সামঞ্জস্য",
     "card": {
       "publisher": "প্রকাশক",
+      "published": "প্রকাশিত",
       "weekly_downloads": "সাপ্তাহিক ডাউনলোড",
       "keywords": "কীওয়ার্ড",
       "license": "লাইসেন্স",
-      "published": "প্রকাশিত",
       "select": "প্যাকেজ নির্বাচন করুন",
       "select_maximum": "সর্বোচ্চ {count}টি প্যাকেজ নির্বাচন করা যাবে"
     },
@@ -550,7 +554,6 @@
       "view_all": "{count}টি ভার্সন দেখুন | সব {count}টি ভার্সন দেখুন",
       "view_all_versions": "সব ভার্সন দেখুন",
       "distribution_title": "Semver গ্রুপ",
-      "distribution_modal_title": "ভার্সনসমূহ",
       "distribution_range_date_same_year": "{from} থেকে {to}, {endYear}",
       "distribution_range_date_multiple_years": "{from}, {startYear} থেকে {to}, {endYear}",
       "grouping_major": "মেজর",
@@ -712,7 +715,8 @@
         "general_description": "Y অক্ষ ডাউনলোডের সংখ্যা নির্দেশ করে। X অক্ষ {start_date} থেকে {end_date} পর্যন্ত তারিখের পরিসর নির্দেশ করে, যেখানে সময়কাল হলো {granularity}। {estimation_notice} {packages_analysis}। {watermark}।",
         "facet_bar_general_description": "{packages} এর জন্য অনুভূমিক বার চার্ট, যেখানে {facet} ({description}) তুলনা করা হয়েছে। {facet_analysis} {watermark}।",
         "facet_bar_analysis": "{package_name} এর মান {value}।"
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "সাপ্তাহিক ডাউনলোড",
@@ -1421,8 +1425,6 @@
     "file_changes": "ফাইল পরিবর্তন",
     "files_count": "{count}টি ফাইল | {count}টি ফাইল",
     "lines_hidden": "{count}টি লাইন লুকানো | {count}টি লাইন লুকানো",
-    "file_too_large": "তুলনার জন্য ফাইলটি খুব বড়",
-    "file_size_warning": "{size} তুলনার 250KB সীমা অতিক্রম করেছে",
     "compare_versions": "ডিফ",
     "compare_versions_title": "সর্বশেষ সংস্করণের সাথে তুলনা করুন",
     "comparing_versions_label": "সংস্করণ তুলনা করা হচ্ছে...",
