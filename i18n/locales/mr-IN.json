@@ -114,9 +114,6 @@
       "more_replies": "{count} आणखी उत्तर... | {count} आणखी उत्तरे..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "सेटिंग्ज",
     "tagline": "तुमचा npmx अनुभव सानुकूलित करा",
@@ -214,6 +211,7 @@
     "cancel": "रद्द करा",
     "save": "जतन करा",
     "edit": "संपादित करा",
+    "error": "त्रुटी",
     "view_on": {
       "npm": "npm वर पहा",
       "github": "GitHub वर पहा",
@@ -232,10 +230,7 @@
     "expand": "विस्तृत करा"
   },
   "profile": {
-    "invite": {},
-    "linked_accounts": {
-      "status": {}
-    }
+    "invite": {}
   },
   "package": {
     "not_found": "पॅकेज सापडले नाही",
@@ -527,8 +522,7 @@
         "general_description": "Y अक्ष डाउनलोड्सची संख्या दर्शवतो. X अक्ष {start_date} ते {end_date} पर्यंतची दिनांक श्रेणी दर्शवतो, ज्यात {granularity} कालावधी आहे.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "या पॅकेजांसाठी आडवा बार चार्ट: {packages}, {facet} ची तुलना ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} ची किंमत {value} आहे."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "साप्ताहिक डाउनलोड्स",

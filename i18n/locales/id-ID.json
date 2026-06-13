@@ -131,9 +131,6 @@
       "more_replies": "{count} balasan lagi... | {count} balasan lagi..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "pengaturan",
     "tagline": "Sesuaikan npmx dengan preferensi anda",
@@ -231,6 +228,7 @@
     "cancel": "Batal",
     "save": "Simpan",
     "edit": "Edit",
+    "error": "Kesalahan",
     "view_on": {
       "npm": "lihat di npm",
       "github": "Lihat di GitHub",
@@ -263,9 +261,6 @@
       "message": "Sepertinya mereka belum menggunakan npmx. Ingin memberi tahu mereka?",
       "share_button": "Bagikan di Bluesky",
       "compose_text": "Hai {'@'}{handle}! Sudah pernah mencoba npmx.dev? Ini adalah browser untuk npm registry yang cepat, modern, dan open-source.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -566,8 +561,7 @@
         "general_description": "Sumbu Y melambangkan jumlah unduhan. Sumbu X melambangkan jangka waktu, mulai dari {start_date} hingga {end_date}, dalam kurun waktu {granularity}. {estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Grafik batang horizontal untuk: {packages}, membandingkan {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} memiliki nilai {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Unduhan Mingguan",

@@ -229,9 +229,6 @@
       "more_replies": "ещё {count} ответ... | ещё {count} ответа... | ещё {count} ответов..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "настройки",
     "tagline": "сделайте npmx удобным для себя",
@@ -334,6 +331,7 @@
     "cancel": "Отменить",
     "save": "Сохранить",
     "edit": "Изменить",
+    "error": "Ошибка",
     "view_on": {
       "npm": "Открыть на npm",
       "github": "Открыть на GitHub",
@@ -369,9 +367,6 @@
       "message": "Похоже, этот пользователь ещё не пользуется npmx. Хотите рассказать ему о проекте?",
       "share_button": "Поделиться в Bluesky",
       "compose_text": "Привет, {'@'}{handle}! Уже смотрел npmx.dev? Это быстрый, современный и open-source браузер для реестра npm.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -712,8 +707,7 @@
         "general_description": "Ось Y представляет количество загрузок. Ось X представляет диапазон дат, от {start_date} до {end_date}, с временным интервалом {granularity}. {estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Горизонтальная гистограмма для: {packages}, сравнение {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "У {package_name} значение {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Загрузки за неделю",

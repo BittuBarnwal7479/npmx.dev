@@ -131,9 +131,6 @@
       "more_replies": "Thêm {count} phản hồi... | Thêm {count} phản hồi..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "cài đặt",
     "tagline": "tùy chỉnh trải nghiệm npmx của riêng bạn",
@@ -231,6 +228,7 @@
     "cancel": "Hủy",
     "save": "Lưu",
     "edit": "Chỉnh sửa",
+    "error": "Lỗi",
     "view_on": {
       "npm": "xem trên npm",
       "github": "Xem trên GitHub",
@@ -263,9 +261,6 @@
       "message": "Có vẻ họ chưa dùng npmx. Bạn có muốn giới thiệu cho họ không?",
       "share_button": "Chia sẻ trên Bluesky",
       "compose_text": "Chào {'@'}{handle}! Bạn đã thử npmx.dev chưa? Đây là trình duyệt cho npm registry, nhanh, hiện đại và mã nguồn mở.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -563,8 +558,7 @@
         "general_description": "Trục Y biểu thị số lượt tải. Trục X biểu thị khoảng ngày, từ {start_date} đến {end_date}, với độ chi tiết {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Biểu đồ cột ngang cho: {packages}, so sánh {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} có giá trị {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Lượt tải hàng tuần",

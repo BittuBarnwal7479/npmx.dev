@@ -127,9 +127,6 @@
       "more_replies": "daha {count} cavab... | daha {count} cavab..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "tənzimləmələr",
     "tagline": "npmx təcrübənizi fərdiləşdirin",
@@ -213,6 +210,7 @@
     "cancel": "Ləğv et",
     "save": "Saxla",
     "edit": "Redaktə et",
+    "error": "Xəta",
     "view_on": {
       "npm": "npm-də bax",
       "github": "GitHub-da bax"
@@ -233,9 +231,6 @@
       "message": "Deyəsən onlar hələ npmx istifadə etmirlər. Onlara bu barədə demək istəyirsiniz?",
       "share_button": "Bluesky-da paylaş",
       "compose_text": "Salam {'@'}{handle}! npmx.dev-i yoxlamısan? Bu, npm reyestri üçün sürətli, müasir və açıq mənbəli brauzerdir.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -504,8 +499,7 @@
         "compare": "Paket endirmə müqayisəsi xətt diaqramı: {packages}.",
         "single_package": "{package} paketi üçün endirmə xətt diaqramı.",
         "general_description": "Y oxu endirmələrin sayını təmsil edir. X oxu tarix aralığını təmsil edir, {start_date}-dən {end_date}-ə, {granularity} zaman dövrü ilə.{estimation_notice} {packages_analysis}. {watermark}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Həftəlik Endirmələr",

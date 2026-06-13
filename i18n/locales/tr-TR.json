@@ -229,9 +229,6 @@
       "more_replies": "{count} yanıt daha... | {count} yanıt daha..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "ayarlar",
     "tagline": "npmx deneyiminizi kişiselleştirin",
@@ -334,6 +331,7 @@
     "cancel": "İptal",
     "save": "Kaydet",
     "edit": "Düzenle",
+    "error": "Hata",
     "view_on": {
       "npm": "npm'de görüntüle",
       "github": "GitHub'da görüntüle",
@@ -369,9 +367,6 @@
       "message": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı",
       "share_button": "Paylaş",
       "compose_text": "npmx'i deneyin - npm için daha iyi bir paket tarayıcısı: {url}"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -713,8 +708,7 @@
         "general_description": "Y ekseni indirme sayısını temsil eder. X ekseni tarih aralığını temsil eder, {start_date}'den {end_date}'e, {granularity} zaman dönemi ile.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "{packages} paketleri için yatay çubuk grafiği, {facet} karşılaştırması ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} paketi {value} değerine sahip."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Haftalık İndirmeler",

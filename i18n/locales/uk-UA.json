@@ -228,9 +228,6 @@
       "more_replies": "ще {count} відповідь... | ще {count} відповіді... | ще {count} відповідей..."
     }
   },
-  "noodles": {
-    "missing": {}
-  },
   "settings": {
     "title": "налаштування",
     "tagline": "налаштуйте ваше середовище npmx",
@@ -331,6 +328,7 @@
     "cancel": "Скасувати",
     "save": "Зберегти",
     "edit": "Редагувати",
+    "error": "Помилка",
     "view_on": {
       "npm": "Переглянути на npm",
       "github": "Переглянути на GitHub",
@@ -366,9 +364,6 @@
       "message": "Схоже, вони ще не користуються npmx. Хочете розповісти їм про нього?",
       "share_button": "Поділитися в Bluesky",
       "compose_text": "Привіт, {'@'}{handle}! Ти вже перевірив npmx.dev? Це швидкий сучасний браузер для реєстру npm з відкритим кодом.\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -708,8 +703,7 @@
         "general_description": "Вісь Y відображає кількість завантажень. Вісь X відображає діапазон дат, від {start_date} до {end_date}, з часовим інтервалом {granularity}.{estimation_notice} {packages_analysis}. {watermark}.",
         "facet_bar_general_description": "Горизонтальна стовпчаста діаграма для {packages}, порівнюється {facet} ({description}). {facet_analysis} {watermark}.",
         "facet_bar_analysis": "{package_name} має значення {value}."
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "Завантажень на тиждень",
