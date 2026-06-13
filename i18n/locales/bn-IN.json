@@ -369,9 +369,6 @@
       "message": "তারা এখনও npmx ব্যবহার করছে বলে মনে হচ্ছে না। এটা সম্পর্কে তাদের বলতে চান?",
       "share_button": "Bluesky এ শেয়ার করুন",
       "compose_text": "আরে {'@'}{handle}! আপনি কি এখনও npmx.dev চেক আউট করেছেন? এটি npm রেজিস্ট্রির জন্য একটি ব্রাউজার যা দ্রুত, আধুনিক এবং ওপেন সোর্স।\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
@@ -405,8 +402,6 @@
       "example": "উদাহরণ:",
       "native": "এটিকে {replacement} দিয়ে প্রতিস্থাপন করা যেতে পারে, যা Node {nodeVersion} থেকে উপলব্ধ।",
       "native_no_version": "এই প্যাকেজটি {replacement} দিয়ে প্রতিস্থাপন করা যেতে পারে।",
-      "simple": "{community} এই প্যাকেজটিকে অনাবশ্যক হিসাবে চিহ্নিত করেছে, পরামর্শ: {replacement}।",
-      "documented": "{community} এই প্যাকেজটিকে আরো ভাল পারফরম্যান্স অপশন হিসাবে চিহ্নিত করেছে।",
       "none": "এই প্যাকেজটি এখন অনাবশ্যক হিসাবে চিহ্নিত, এবং এর কার্যকরিতা সমস্ত ইঞ্জিনে নেটিভভাবে উপলব্ধ হওয়ার সম্ভাবনা আছে।",
       "learn_more": "আরো জানুন",
       "learn_more_above": "আরো জানুন উপরে।",
@@ -715,8 +710,7 @@
         "general_description": "Y অক্ষ ডাউনলোডের সংখ্যা নির্দেশ করে। X অক্ষ {start_date} থেকে {end_date} পর্যন্ত তারিখের পরিসর নির্দেশ করে, যেখানে সময়কাল হলো {granularity}। {estimation_notice} {packages_analysis}। {watermark}।",
         "facet_bar_general_description": "{packages} এর জন্য অনুভূমিক বার চার্ট, যেখানে {facet} ({description}) তুলনা করা হয়েছে। {facet_analysis} {watermark}।",
         "facet_bar_analysis": "{package_name} এর মান {value}।"
-      },
-      "embedding": {}
+      }
     },
     "downloads": {
       "title": "সাপ্তাহিক ডাউনলোড",

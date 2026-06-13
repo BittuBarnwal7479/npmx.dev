@@ -193,9 +193,6 @@
       "message": "Изглежда, че все още не използват npmx. Искате ли да им кажете за него?",
       "share_button": "Споделете в Bluesky",
       "compose_text": "Здравей {'@'}{handle}! Проверил ли си npmx.dev? Това е браузър за npm регистъра - бърз, модерен и с отворен код.\\nhttps://npmx.dev"
-    },
-    "linked_accounts": {
-      "status": {}
     }
   },
   "package": {
