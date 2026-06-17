@@ -315,6 +315,19 @@ export const isNpmJsUrlThatCanBeRedirected = (url: URL) => {
   return true
 }
 
+function isLocalNpmxPath(url: string): boolean {
+  return (
+    url === '/package' ||
+    url.startsWith('/package/') ||
+    url === '/org' ||
+    url.startsWith('/org/') ||
+    url === '/search' ||
+    url.startsWith('/search?') ||
+    url.startsWith('/search#') ||
+    url.startsWith('/~')
+  )
+}
+
 /**
  * Resolve a relative URL to an absolute URL.
  * If repository info is available, resolve to provider's raw file URLs.
@@ -341,10 +354,13 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
   // Check if this is a markdown file link
   const isMarkdownFile = /\.md$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
 
-  // Root-relative markdown links in READMEs point to files at the repository root.
-  // Keep non-markdown absolute paths local (e.g. /package/foo from an npmjs redirect).
   if (url.startsWith('/')) {
-    return isMarkdownFile && repoInfo?.blobBaseUrl ? `${repoInfo.blobBaseUrl}${url}` : url
+    if (isLocalNpmxPath(url) || !repoInfo?.rawBaseUrl) {
+      return url
+    }
+
+    const baseUrl = isMarkdownFile ? repoInfo.blobBaseUrl : repoInfo.rawBaseUrl
+    return `${baseUrl}${url}`
   }
   if (hasProtocol(url, { acceptRelative: true })) {
     try {

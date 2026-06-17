@@ -272,12 +272,44 @@ describe('Markdown File URL Resolution', () => {
       )
     })
 
-    it('keeps root-relative non-markdown links local', async () => {
+    it('resolves root-relative non-.md links to the repository root raw URL', async () => {
+      const repoInfo = createRepoInfo({
+        directory: 'packages/core',
+      })
+      const markdown = `[Logo](/assets/logo.png)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain(
+        'href="https://raw.githubusercontent.com/test-owner/test-repo/HEAD/assets/logo.png"',
+      )
+    })
+
+    it('keeps local npmx paths unchanged', async () => {
       const repoInfo = createRepoInfo()
       const markdown = `[Package](/package/test-pkg)`
       const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
 
       expect(result.html).toContain('href="/package/test-pkg"')
+    })
+
+    it('keeps npmjs redirects local when repository info is available', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = `[Package](https://www.npmjs.com/package/test-pkg)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain('href="/package/test-pkg"')
+    })
+
+    it('keeps npmjs route roots local when repository info is available', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = [
+        `[Packages](https://www.npmjs.com/package)`,
+        `[Organizations](https://www.npmjs.com/org)`,
+      ].join('\n')
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain('href="/package"')
+      expect(result.html).toContain('href="/org"')
     })
   })
 
