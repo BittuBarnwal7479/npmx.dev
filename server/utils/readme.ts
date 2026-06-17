@@ -349,7 +349,7 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
   // Check if this is a markdown file link
   const isMarkdownFile = /\.md$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
 
-  if (url.startsWith('/')) {
+  if (url.startsWith('/') && !url.startsWith('//')) {
     if (!repoInfo?.rawBaseUrl) {
       return url
     }

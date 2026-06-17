@@ -348,6 +348,14 @@ describe('Markdown File URL Resolution', () => {
 
       expect(result.html).toContain('href="https://docs.example.com/"')
     })
+
+    it('leaves protocol-relative URLs unchanged with repository info', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = `[CDN](//cdn.example.com/file.css)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain('href="//cdn.example.com/file.css"')
+    })
   })
 
   describe('anchor links', () => {
