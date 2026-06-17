@@ -284,12 +284,14 @@ describe('Markdown File URL Resolution', () => {
       )
     })
 
-    it('keeps local npmx paths unchanged', async () => {
+    it('resolves authored root-relative npmx-like paths to the repository root raw URL', async () => {
       const repoInfo = createRepoInfo()
       const markdown = `[Package](/package/test-pkg)`
       const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
 
-      expect(result.html).toContain('href="/package/test-pkg"')
+      expect(result.html).toContain(
+        'href="https://raw.githubusercontent.com/test-owner/test-repo/HEAD/package/test-pkg"',
+      )
     })
 
     it('keeps npmjs redirects local when repository info is available', async () => {

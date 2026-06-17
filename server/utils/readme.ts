@@ -269,6 +269,7 @@ const reservedPathsNpmJs = [
 const npmJsHosts = new Set(['www.npmjs.com', 'npmjs.com', 'www.npmjs.org', 'npmjs.org'])
 
 const USER_CONTENT_PREFIX = 'user-content-'
+const LOCAL_NPMX_REDIRECT_PREFIX = '$npmx-local:'
 
 function withUserContentPrefix(value: string): string {
   return value.startsWith(USER_CONTENT_PREFIX) ? value : `${USER_CONTENT_PREFIX}${value}`
@@ -315,17 +316,8 @@ export const isNpmJsUrlThatCanBeRedirected = (url: URL) => {
   return true
 }
 
-function isLocalNpmxPath(url: string): boolean {
-  return (
-    url === '/package' ||
-    url.startsWith('/package/') ||
-    url === '/org' ||
-    url.startsWith('/org/') ||
-    url === '/search' ||
-    url.startsWith('/search?') ||
-    url.startsWith('/search#') ||
-    url.startsWith('/~')
-  )
+function toLocalNpmxRedirect(path: string): string {
+  return `${LOCAL_NPMX_REDIRECT_PREFIX}${path}`
 }
 
 /**
@@ -336,6 +328,9 @@ function isLocalNpmxPath(url: string): boolean {
  */
 function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo): string {
   if (!url) return url
+  if (url.startsWith(LOCAL_NPMX_REDIRECT_PREFIX)) {
+    return url.slice(LOCAL_NPMX_REDIRECT_PREFIX.length)
+  }
   if (url.startsWith('#')) {
     // Prefix anchor links to match heading IDs (avoids collision with page IDs)
     // Normalize markdown-style heading fragments to the same slug format used
@@ -355,7 +350,7 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
   const isMarkdownFile = /\.md$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
 
   if (url.startsWith('/')) {
-    if (isLocalNpmxPath(url) || !repoInfo?.rawBaseUrl) {
+    if (!repoInfo?.rawBaseUrl) {
       return url
     }
 
@@ -368,7 +363,7 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
       if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
         // Redirect npmjs urls to ourself
         if (isNpmJsUrlThatCanBeRedirected(parsed)) {
-          return parsed.pathname + parsed.search + parsed.hash
+          return toLocalNpmxRedirect(parsed.pathname + parsed.search + parsed.hash)
         }
         return url
       }
