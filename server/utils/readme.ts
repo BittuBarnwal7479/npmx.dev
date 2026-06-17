@@ -338,8 +338,14 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
     const normalizedFragment = slugify(decodeHashFragment(fragment))
     return toUserContentHash(normalizedFragment || fragment)
   }
-  // Absolute paths (e.g. /package/foo from a previous npmjs redirect) are already resolved
-  if (url.startsWith('/')) return url
+  // Check if this is a markdown file link
+  const isMarkdownFile = /\.md$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
+
+  // Root-relative markdown links in READMEs point to files at the repository root.
+  // Keep non-markdown absolute paths local (e.g. /package/foo from an npmjs redirect).
+  if (url.startsWith('/')) {
+    return isMarkdownFile && repoInfo?.blobBaseUrl ? `${repoInfo.blobBaseUrl}${url}` : url
+  }
   if (hasProtocol(url, { acceptRelative: true })) {
     try {
       const parsed = new URL(url, 'https://example.com')
@@ -359,9 +365,6 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
     }
     // for non-HTTP protocols (javascript:, data:, etc.), don't return, treat as relative
   }
-
-  // Check if this is a markdown file link
-  const isMarkdownFile = /\.md$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
 
   // Use provider's URL base when repository info is available
   // This handles assets that exist in the repo but not in the npm tarball

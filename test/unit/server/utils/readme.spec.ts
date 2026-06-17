@@ -249,6 +249,36 @@ describe('Markdown File URL Resolution', () => {
         'href="https://github.com/test-owner/test-repo/blob/HEAD/CONTRIBUTING.md"',
       )
     })
+
+    it('resolves root-relative .md links to the repository root blob URL', async () => {
+      const repoInfo = createRepoInfo({
+        directory: 'packages/core',
+      })
+      const markdown = `[Root Contributing](/CONTRIBUTING.md)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain(
+        'href="https://github.com/test-owner/test-repo/blob/HEAD/CONTRIBUTING.md"',
+      )
+    })
+
+    it('resolves root-relative .md links in raw HTML anchors', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = `<a href="/CONTRIBUTING.md">Contributing</a>`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain(
+        'href="https://github.com/test-owner/test-repo/blob/HEAD/CONTRIBUTING.md"',
+      )
+    })
+
+    it('keeps root-relative non-markdown links local', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = `[Package](/package/test-pkg)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain('href="/package/test-pkg"')
+    })
   })
 
   describe('without repository info', () => {
