@@ -67,9 +67,9 @@ describe('keytrace utilities', () => {
     expect(mapKeytraceVerificationStatus(createClaim({ status: 'failed', verified: true }))).toBe(
       'failed',
     )
-    expect(mapKeytraceVerificationStatus(createClaim({ status: 'retracted', verified: true }))).toBe(
-      'failed',
-    )
+    expect(
+      mapKeytraceVerificationStatus(createClaim({ status: 'retracted', verified: true })),
+    ).toBe('failed')
   })
 
   it('maps current and stale verified claims', () => {
@@ -95,7 +95,9 @@ describe('keytrace utilities', () => {
   })
 
   it('maps errors to failed and other claims to unverified', () => {
-    expect(mapKeytraceVerificationStatus(createClaim({ error: 'Invalid signature' }))).toBe('failed')
+    expect(mapKeytraceVerificationStatus(createClaim({ error: 'Invalid signature' }))).toBe(
+      'failed',
+    )
     expect(mapKeytraceVerificationStatus(createClaim())).toBe('unverified')
   })
 })
