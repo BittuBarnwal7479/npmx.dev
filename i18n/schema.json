@@ -1078,9 +1078,6 @@
         "edit": {
           "type": "string"
         },
-        "error": {
-          "type": "string"
-        },
         "view_on": {
           "type": "object",
           "properties": {
