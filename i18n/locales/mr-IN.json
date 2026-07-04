@@ -255,12 +255,9 @@
     "replacement": {
       "title": "कदाचित तुम्हाला या निर्भरतेची गरज नसेल.",
       "native": "हे {replacement} सह बदलले जाऊ शकते, Node {nodeVersion} पासून उपलब्ध आहे.",
-      "simple": "{community} ने या पॅकेजला अनावश्यक म्हणून चिन्हांकित केले आहे, सल्ल्यासह: {replacement}.",
-      "documented": "{community} ने या पॅकेजला अधिक कार्यक्षम पर्याय असल्याने चिन्हांकित केले आहे.",
       "none": "हे पॅकेज यापुढे आवश्यक नाही असे चिन्हांकित केले गेले आहे, आणि त्याची कार्यक्षमता सर्व इंजिनांमध्ये मूळतः उपलब्ध असू शकते.",
       "learn_more": "अधिक जाणून घ्या",
       "learn_more_above": "वर अधिक जाणून घ्या.",
-      "community": "समुदाय",
       "consider_no_dep": "+ निर्भरता नको का?"
     },
     "stats": {
@@ -399,7 +396,6 @@
       "view_all": "{count} आवृत्ती पहा | सर्व {count} आवृत्त्या पहा",
       "view_all_versions": "सर्व आवृत्त्या पहा",
       "distribution_title": "Semver गट",
-      "distribution_modal_title": "आवृत्त्या",
       "distribution_range_date_same_year": "{from} ते {to}, {endYear}",
       "distribution_range_date_multiple_years": "{from}, {startYear} ते {to}, {endYear}",
       "grouping_major": "प्रमुख",

@@ -296,9 +296,8 @@ export function buildNormalisedTrendsDataset(options: {
     predictionPoints?: number
   }
   endDateMs?: number | null
-  nowMs?: number
 }): TrendsNormalisedDatasetItem[] {
-  const referenceMs = options.endDateMs ?? options.nowMs ?? Date.now()
+  const referenceMs = options.endDateMs ?? Date.now()
   const lastDateMs = options.dates.at(-1) ?? 0
   const isAbsoluteMetric = options.selectedMetric === 'contributors'
 
@@ -348,6 +347,25 @@ export function getTrendsDatetimeFormatterOptions(granularity: ChartTimeGranular
   }[granularity]
 }
 
+// Some locales require more spacing for the last label value displayed on the chart, and for which some extra padding is reserved in the chart config.
+export const LOCALES_WITH_EXTRA_SPACE = [
+  'bg-BG',
+  'ru-RU',
+  'cs-CZ',
+  'de-AT',
+  'de-DE',
+  'id-ID',
+  'it-IT',
+  'ja-JP',
+  'nb-NO',
+  'nl-NL',
+  'pl-PL',
+  'pt-BR',
+  'ro-RO',
+  'sr-Latn-RS',
+  'uk-UA',
+]
+
 export function buildTrendsChartConfig(
   options: TrendChartConfigOptions & {
     dates: number[]
@@ -372,7 +390,11 @@ export function buildTrendsChartConfig(
       backgroundColor: options.colors.bg,
       padding: {
         bottom: options.displayedGranularity === 'yearly' ? 84 : 64,
-        right: 145,
+        right: options.isMultiPackageMode
+          ? LOCALES_WITH_EXTRA_SPACE.includes(options.locale)
+            ? 180
+            : 160
+          : 145,
       },
       userOptions: {
         buttons: {

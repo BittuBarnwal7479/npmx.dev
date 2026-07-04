@@ -43,6 +43,9 @@
         "about": {
           "type": "string"
         },
+        "sponsors": {
+          "type": "string"
+        },
         "blog": {
           "type": "string"
         },
@@ -74,6 +77,9 @@
           "type": "string"
         },
         "other": {
+          "type": "string"
+        },
+        "sponsored_by": {
           "type": "string"
         }
       },
@@ -146,6 +152,9 @@
           "type": "string"
         },
         "open_timeline": {
+          "type": "string"
+        },
+        "open_stats": {
           "type": "string"
         }
       },
@@ -300,6 +309,21 @@
         },
         "connected": {
           "type": "string"
+        },
+        "keyboard_shortcuts": {
+          "type": "object",
+          "properties": {
+            "navigate": {
+              "type": "string"
+            },
+            "select": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
         },
         "state": {
           "type": "object",
@@ -470,6 +494,9 @@
               "type": "string"
             },
             "changelog": {
+              "type": "string"
+            },
+            "stats": {
               "type": "string"
             }
           },
@@ -1297,9 +1324,6 @@
             "learn_more_above": {
               "type": "string"
             },
-            "community": {
-              "type": "string"
-            },
             "consider_no_dep": {
               "type": "string"
             }
@@ -1344,6 +1368,15 @@
                 }
               },
               "additionalProperties": false
+            },
+            "main_information": {
+              "type": "string"
+            },
+            "trends": {
+              "type": "string"
+            },
+            "version_distribution": {
+              "type": "string"
             }
           },
           "additionalProperties": false
@@ -1433,6 +1466,9 @@
               "type": "string"
             },
             "timeline": {
+              "type": "string"
+            },
+            "stats": {
               "type": "string"
             },
             "compare_this_package": {
@@ -1733,9 +1769,6 @@
               "type": "string"
             },
             "distribution_title": {
-              "type": "string"
-            },
-            "distribution_modal_title": {
               "type": "string"
             },
             "distribution_range_date_same_year": {
@@ -2234,6 +2267,9 @@
                   "type": "string"
                 },
                 "preview": {
+                  "type": "string"
+                },
+                "tip": {
                   "type": "string"
                 }
               },
@@ -3636,6 +3672,12 @@
           "properties": {
             "title": {
               "type": "string"
+            },
+            "gold": {
+              "type": "string"
+            },
+            "silver": {
+              "type": "string"
             }
           },
           "additionalProperties": false
@@ -3761,6 +3803,180 @@
                   "type": "string"
                 },
                 "cta": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "sponsors_page": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "meta_description": {
+          "type": "string"
+        },
+        "intro": {
+          "type": "string"
+        },
+        "what_we_do": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "what_support_means": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "cta": {
+          "type": "string"
+        },
+        "community_growth_footnote": {
+          "type": "string"
+        },
+        "what_this_means_for_you": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "cards": {
+              "type": "object",
+              "properties": {
+                "people": {
+                  "type": "object",
+                  "properties": {
+                    "contributors": {
+                      "type": "string"
+                    },
+                    "community_members": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "visitors": {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "stars": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "community": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "adoption": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "default_source": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "tiers": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "per_month": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "string"
+            },
+            "silver": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "gold": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "platinum": {
+              "type": "object",
+              "properties": {
+                "name": {
                   "type": "string"
                 }
               },
@@ -4283,6 +4499,18 @@
                   "additionalProperties": false
                 },
                 "githubStars": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "githubForks": {
                   "type": "object",
                   "properties": {
                     "label": {

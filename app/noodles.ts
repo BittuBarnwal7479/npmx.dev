@@ -9,6 +9,45 @@ const GRAPHIEROS = { name: 'Graphieros', blueskyHandle: 'graphieros.npmx.social'
 
 const entries: Noodle[] = [
   {
+    key: 'tetris',
+    title: 'World Tetris Day',
+    slug: 'tetris',
+    date: '2026-06-06',
+    dateTo: '2026-06-08',
+    timezone: 'auto',
+    tagline: false,
+    occasion:
+      'The legendary console turns 42. Yes, you matched the blocks correctly — but polyominoes are cool too!',
+    prUrl: 'https://github.com/npmx-dev/npmx.dev/pull/2855',
+    authors: [ALEX],
+    posterImage: '/extra/tetris.svg',
+    references: [
+      {
+        label: 'Tetris (1984) - Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Tetris',
+      },
+    ],
+  },
+  {
+    key: 'pride-1',
+    title: 'Pride Month',
+    slug: 'pride',
+    date: '2026-06-01',
+    dateTo: '2026-07-01',
+    timezone: 'auto',
+    occasion: 'We stand together. Always, everywhere, for all of us. Happy Pride Month! 🏳️‍🌈',
+    prUrl: 'https://github.com/npmx-dev/npmx.dev/pull/2826',
+    authors: [ALEX, ALFON],
+    posterImage: '/extra/pride-1.svg',
+    variants: ['/extra/pride-2.svg', '/extra/pride-3.png'],
+    references: [
+      {
+        label: 'Pride Month - Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Pride_Month',
+      },
+    ],
+  },
+  {
     key: 'press',
     title: 'Press Freedom Day',
     slug: 'press',
@@ -23,7 +62,7 @@ const entries: Noodle[] = [
     posterImage: '/extra/npmx-dark-press.png',
     references: [
       {
-        label: 'World Press Freedom Day',
+        label: 'World Press Freedom Day - Wikipedia',
         url: 'https://en.wikipedia.org/wiki/World_Press_Freedom_Day',
       },
     ],
@@ -51,6 +90,12 @@ const entries: Noodle[] = [
     prUrl: 'https://github.com/npmx-dev/npmx.dev/pull/2349',
     authors: [ALFON],
     posterImage: '/extra/npmx-cute-transgender.svg',
+    references: [
+      {
+        label: 'International Transgender Day of Visibility - Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/International_Transgender_Day_of_Visibility',
+      },
+    ],
   },
   {
     key: 'artemis',
@@ -65,6 +110,12 @@ const entries: Noodle[] = [
     prUrl: 'https://github.com/npmx-dev/npmx.dev/pull/2421',
     authors: [ALEX, ALFON],
     posterImage: '/extra/npmx-dark-artemis.svg',
+    references: [
+      {
+        label: 'Artemis II - Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Artemis_II',
+      },
+    ],
   },
   {
     key: 'nodejs',

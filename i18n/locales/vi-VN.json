@@ -286,12 +286,9 @@
     "replacement": {
       "title": "Bạn có thể không cần dependency này.",
       "native": "Có thể thay thế bằng {replacement}, có sẵn từ Node {nodeVersion}.",
-      "simple": "{community} đã đánh dấu gói này là dư thừa, với gợi ý: {replacement}.",
-      "documented": "{community} đã đánh dấu gói này có các lựa chọn thay thế hiệu năng tốt hơn.",
       "none": "Gói này đã được đánh dấu là không còn cần thiết, chức năng của nó có thể đã có sẵn sẵn trong các engine.",
       "learn_more": "Tìm hiểu thêm",
       "learn_more_above": "Tìm hiểu thêm ở trên.",
-      "community": "cộng đồng",
       "consider_no_dep": "+ Cân nhắc không dùng dep?"
     },
     "stats": {
@@ -430,7 +427,6 @@
       "view_all": "Xem {count} phiên bản | Xem tất cả {count} phiên bản",
       "view_all_versions": "Xem tất cả phiên bản",
       "distribution_title": "Nhóm Semver",
-      "distribution_modal_title": "Phiên bản",
       "distribution_range_date_same_year": "từ {from} đến {to}, {endYear}",
       "distribution_range_date_multiple_years": "từ {from}, {startYear} đến {to}, {endYear}",
       "grouping_major": "Major",
