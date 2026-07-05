@@ -262,6 +262,36 @@ describe('Markdown File URL Resolution', () => {
       )
     })
 
+    it('resolves issue #2928 root-relative markdown links from the repo root', async () => {
+      const repoInfo = createRepoInfo({
+        owner: 'withastro',
+        repo: 'astro',
+        rawBaseUrl: 'https://raw.githubusercontent.com/withastro/astro/HEAD',
+        blobBaseUrl: 'https://github.com/withastro/astro/blob/HEAD',
+        directory: 'packages/astro',
+      })
+      const markdown = `[contributing guide](/CONTRIBUTING.md)`
+      const result = await renderReadmeHtml(markdown, 'astro', repoInfo)
+
+      expect(result.html).toContain(
+        'href="https://github.com/withastro/astro/blob/HEAD/CONTRIBUTING.md"',
+      )
+      expect(result.html).not.toContain('href="/CONTRIBUTING.md"')
+      expect(result.html).not.toContain('href="https://npmx.dev/CONTRIBUTING.md"')
+    })
+
+    it('resolves root-relative .markdown links to the repository root blob URL', async () => {
+      const repoInfo = createRepoInfo({
+        directory: 'packages/core',
+      })
+      const markdown = `[Root Contributing](/CONTRIBUTING.markdown)`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      expect(result.html).toContain(
+        'href="https://github.com/test-owner/test-repo/blob/HEAD/CONTRIBUTING.markdown"',
+      )
+    })
+
     it('resolves root-relative .md links in raw HTML anchors', async () => {
       const repoInfo = createRepoInfo()
       const markdown = `<a href="/CONTRIBUTING.md">Contributing</a>`
@@ -664,13 +694,13 @@ describe('HTML output', () => {
   })
 
   describe('heading anchors (renderer.heading)', () => {
-    it('keeps the full-line anchor wrapper and places the link to the heading at the end', async () => {
+    it('strips a full-line anchor wrapper and uses inner text for slug, toc, and permalink', async () => {
       const markdown = '## <a href="https://example.com">My Section</a>'
       const result = await renderReadmeHtml(markdown, 'test-pkg')
 
       expect(result.toc).toEqual([{ text: 'My Section', depth: 2, id: 'user-content-my-section' }])
       expect(result.html).toBe(
-        `<h3 id="user-content-my-section" data-level="2"><a href="https://example.com" rel="nofollow noreferrer noopener" target="_blank">My Section</a><a href="#user-content-my-section" aria-hidden="true" tabindex="-1"></a></h3>\n`,
+        `<h3 id="user-content-my-section" data-level="2"><a href="#user-content-my-section">My Section</a></h3>\n`,
       )
     })
 
