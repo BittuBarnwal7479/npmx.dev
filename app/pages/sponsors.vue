@@ -170,7 +170,7 @@ defineOgImage(
             :to="SPONSORSHIP_TIER_LINKS.silver"
             no-new-tab-icon
             no-underline
-            class="block border border-fg/80 rounded-xl p-5 bg-bg-muted transition-colors hover:bg-bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fg"
+            class="block border border-fg/80 rounded-xl p-5 bg-bg-muted hover:bg-bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fg"
           >
             <div class="flex items-center justify-between gap-3 mb-2">
               <h3 class="font-mono text-base text-fg uppercase tracking-wider">
@@ -190,7 +190,7 @@ defineOgImage(
             :to="SPONSORSHIP_TIER_LINKS.gold"
             no-new-tab-icon
             no-underline
-            class="block border border-badge-yellow/80 rounded-xl p-5 bg-linear-to-br from-badge-yellow/8 to-bg-subtle/40 relative overflow-hidden mt-4 transition-colors hover:from-badge-yellow/12 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-badge-yellow"
+            class="block border border-badge-yellow/80 rounded-xl p-5 bg-linear-to-br from-badge-yellow/8 to-bg-subtle/40 relative overflow-hidden mt-4 hover:from-badge-yellow/12 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-badge-yellow"
           >
             <div class="flex items-center justify-between gap-3 mb-2 relative">
               <h3 class="font-mono text-base text-fg uppercase tracking-wider">
@@ -210,7 +210,7 @@ defineOgImage(
             :to="SPONSORSHIP_TIER_LINKS.platinum"
             no-new-tab-icon
             no-underline
-            class="block border border-badge-blue/80 rounded-xl p-5 bg-linear-to-br from-badge-blue/8 to-bg-subtle/40 relative overflow-hidden mt-4 transition-colors hover:from-badge-blue/12 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-badge-blue"
+            class="block border border-badge-blue/80 rounded-xl p-5 bg-linear-to-br from-badge-blue/8 to-bg-subtle/40 relative overflow-hidden mt-4 hover:from-badge-blue/12 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-badge-blue"
           >
             <div class="flex items-center justify-between gap-3 mb-2">
               <h3 class="font-mono text-base text-fg uppercase tracking-wider">
