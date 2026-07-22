@@ -10,7 +10,7 @@ const SPONSORSHIP_TIER_LINKS = {
   silver:
     'https://opencollective.com/npmx/contribute/patron-98135/checkout?interval=month&amount=500&contributeAs=me',
   gold: 'https://opencollective.com/npmx/contribute/patron-98135/checkout?interval=month&amount=1000&contributeAs=me',
-  platinum: 'https://opencollective.com/npmx/donate?interval=oneTime&amount=20&contributeAs=me',
+  platinum: 'https://opencollective.com/npmx/donate?interval=month&amount=1250&contributeAs=me',
 } as const
 
 const { t } = useI18n()
