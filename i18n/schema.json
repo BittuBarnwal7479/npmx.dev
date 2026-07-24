@@ -577,6 +577,9 @@
             "background_theme_changed": {
               "type": "string"
             },
+            "foreground_theme_changed": {
+              "type": "string"
+            },
             "download_started": {
               "type": "string"
             },
@@ -789,6 +792,9 @@
             },
             "body": {
               "type": "string"
+            },
+            "empty_bowl": {
+              "type": "string"
             }
           },
           "additionalProperties": false
@@ -956,6 +962,24 @@
               "type": "string"
             },
             "black": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "foreground_themes": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "contrast": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "muted": {
               "type": "string"
             }
           },
@@ -1235,6 +1259,9 @@
           "type": "string"
         },
         "copy_name": {
+          "type": "string"
+        },
+        "copy_version": {
           "type": "string"
         },
         "deprecation": {
@@ -1921,6 +1948,12 @@
                 "tab_aria_label": {
                   "type": "string"
                 },
+                "dependency_size": {
+                  "type": "string"
+                },
+                "other_dependencies": {
+                  "type": "string"
+                },
                 "base_scale": {
                   "type": "string"
                 },
@@ -1943,6 +1976,18 @@
                       "type": "string"
                     },
                     "general_description": {
+                      "type": "string"
+                    },
+                    "stackbar_segment_share": {
+                      "type": "string"
+                    },
+                    "stackbar_top_segments": {
+                      "type": "string"
+                    },
+                    "stackbar_largest_increase": {
+                      "type": "string"
+                    },
+                    "stackbar_largest_decrease": {
                       "type": "string"
                     }
                   },
@@ -2228,6 +2273,9 @@
                   "type": "string"
                 },
                 "watermark": {
+                  "type": "string"
+                },
+                "watermark_top": {
                   "type": "string"
                 },
                 "analysis": {
@@ -3230,6 +3278,9 @@
           "type": "string"
         },
         "binary_rendering_warning": {
+          "type": "string"
+        },
+        "possibly_unnecessary": {
           "type": "string"
         }
       },

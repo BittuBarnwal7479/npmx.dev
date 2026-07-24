@@ -191,6 +191,7 @@
       "theme_changed": "Theme set to {theme}.",
       "accent_color_changed": "Accent color set to {color}.",
       "background_theme_changed": "Background shade set to {theme}.",
+      "foreground_theme_changed": "Foreground shade set to {theme}.",
       "download_started": "Downloading {package} tarball.",
       "copied_to_clipboard": "Copied to clipboard.",
       "npm_disconnected": "npm CLI disconnected.",
@@ -261,7 +262,8 @@
     "back_to_archive": "Back to all noodles",
     "missing": {
       "title": "This noodle never made it out of the bowl.",
-      "body": "We don't have a “{slug}” noodle on the menu. Either it's still being plated, or it was never written. Either way — back to the archive."
+      "body": "We don't have a “{slug}” noodle on the menu. Either it's still being plated, or it was never written. Either way — back to the archive.",
+      "empty_bowl": "empty bowl"
     }
   },
   "settings": {
@@ -318,6 +320,12 @@
       "zinc": "Zinc",
       "slate": "Slate",
       "black": "Black"
+    },
+    "foreground_themes": {
+      "label": "Foreground shade",
+      "contrast": "Contrast",
+      "standard": "Standard",
+      "muted": "Muted"
     },
     "keyboard_shortcuts_enabled": "Enable keyboard shortcuts",
     "keyboard_shortcuts_enabled_description": "Keyboard shortcuts can be disabled if they conflict with other browser or system shortcuts",
@@ -411,6 +419,7 @@
     "verified_provenance": "Verified provenance",
     "navigation": "Package",
     "copy_name": "Copy package name",
+    "copy_version": "Copy package version",
     "deprecation": {
       "package": "This package has been deprecated.",
       "version": "This version has been deprecated.",
@@ -639,6 +648,8 @@
       "provenance_removed": "Provenance removed",
       "chart": {
         "tab_aria_label": "Metric selection",
+        "dependency_size": "Dependency Size",
+        "other_dependencies": "Other",
         "base_scale": "start y-axis at zero",
         "zoom": "zoom",
         "reset_minimap": "reset minimap",
@@ -646,7 +657,11 @@
         "copy_alt": {
           "key_changes": "Key changes: {version_events}.",
           "version_events": "version {version}: {events}",
-          "general_description": "Line chart showing the {metric} of the {package} package, from version {first} to {last}. The {metric} in version {first} is {first_value}, in version {last} is {last_value} ({overall_progress_percentage}% overall). {key_changes} {watermark}."
+          "general_description": "Line chart showing the {metric} of the {package} package, from version {first} to {last}. The {metric} in version {first} is {first_value}, in version {last} is {last_value} ({overall_progress_percentage}% overall). {key_changes} {watermark}.",
+          "stackbar_segment_share": "{segment}: {value} ({percentage})",
+          "stackbar_top_segments": "In {version}, the largest segments are {segments}.",
+          "stackbar_largest_increase": "The largest increase is {segment}, up {delta}.",
+          "stackbar_largest_decrease": "The largest decrease is {segment}, down {delta}."
         }
       }
     },
@@ -742,6 +757,7 @@
         "trend_undefined": "undefined (insufficient data)",
         "button_label": "Copy alt text",
         "watermark": "At the bottom, a watermark reads \"./npmx a fast, modern browser for the npm registry\"",
+        "watermark_top": "At the top, a watermark reads \"./npmx a fast, modern browser for the npm registry\"",
         "analysis": "{package_name} starts at {start_value} and ends at {end_value}, showing a {trend} trend with a slope of {downloads_slope} downloads per time interval",
         "estimation": "The final value is an estimate based on partial data for the current period.",
         "estimations": "The final values are estimates based on partial data for the current period.",
@@ -755,7 +771,7 @@
         "chart": "Embed this chart",
         "copy_url": "Copy this URL to embed the chart into your website",
         "preview": "Preview",
-        "tip": "If startDate and endDate are not provided, the chart defaults to the last 12 months."
+        "tip": "If startDate and endDate are not provided in the URL, the graph will display the last 12 months by default."
       }
     },
     "downloads": {
@@ -1075,7 +1091,8 @@
     },
     "file_path": "File path",
     "binary_file": "Binary file",
-    "binary_rendering_warning": "File type \"{contentType}\" is not supported for preview."
+    "binary_rendering_warning": "File type \"{contentType}\" is not supported for preview.",
+    "possibly_unnecessary": "May be unnecessary in a published package"
   },
   "badges": {
     "provenance": {
