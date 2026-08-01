@@ -94,6 +94,7 @@ const { isLoading: likesLoadingMore } = useInfiniteScroll(
   async () => {
     try {
       const result = await fetchProfileLikes(identity.value, likesCursor.value ?? null, 20)
+      likesError.value = false
       allLikesRecords.value = [...allLikesRecords.value, ...(result.likes ?? [])]
       likesCursor.value = result.cursor ?? null
     } catch {
@@ -277,17 +278,20 @@ defineOgImage(
           dir="ltr"
         >
           {{ $t('profile.likes') }}
-          <span v-if="likes">({{ likes.records?.length ?? 0 }})</span>
+          <span>({{ allLikesRecords.length }})</span>
         </h2>
       </div>
-      <div v-if="status === 'pending'" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div v-if="isLoadingInitialLikes" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <SkeletonBlock v-for="i in 4" :key="i" class="h-16 rounded-lg" />
       </div>
-      <div v-else-if="status === 'error'" class="p-4 bg-bg-subtle border border-border rounded-lg">
+      <div
+        v-else-if="likesError && allLikesRecords.length === 0"
+        class="p-4 bg-bg-subtle border border-border rounded-lg"
+      >
         <p class="font-mono text-sm">{{ $t('profile.likes_error') }}</p>
       </div>
       <div
-        v-else-if="!likes?.records?.length"
+        v-else-if="allLikesRecords.length === 0"
         class="p-4 bg-bg-subtle border border-border rounded-lg"
       >
         <p class="font-mono text-sm text-fg-muted">{{ $t('profile.likes_empty') }}</p>
@@ -298,6 +302,9 @@ defineOgImage(
             <PackageLikeCard :packageUrl="like" />
           </li>
         </ol>
+        <p v-if="likesError" class="font-mono text-sm">
+          {{ $t('profile.likes_error') }}
+        </p>
       </template>
 
       <!-- Loading more indicator -->
