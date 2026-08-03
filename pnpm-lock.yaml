@@ -188,8 +188,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
       fast-npm-meta:
-        specifier: 2.1.0
-        version: 2.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       focus-trap:
         specifier: ^8.0.0
         version: 8.2.2
@@ -6857,8 +6857,8 @@ packages:
     resolution: {integrity: sha512-tWhw7z4jFuQgZB9tbQyUh5BY9nNd/wimM+fBLfmmJjakkJDNvbJKm0nQ5ruPKC0us1HGg7L6iBk1fxpSzcgSaA==}
     hasBin: true
 
-  fast-npm-meta@2.1.0:
-    resolution: {integrity: sha512-Nfk1zTQvBmvh1XMxh9VkxMfRLHgv61YlIW80s4l/ZQVUbV4k4M5HjuQLlL8TooYD0AsSl19p4DU63wHZqZ0y9Q==}
+  fast-npm-meta@2.2.0:
+    resolution: {integrity: sha512-99jPl8JkCSCa4VlboNU1XuL98ijm74Pm9CGo6H4BoMVoVh1uhguQcvwLgXDT8Vkl2qj/UEQ0J9gD8beHjTFk1w==}
     hasBin: true
 
   fast-string-truncated-width@1.2.1:
@@ -17862,7 +17862,9 @@ snapshots:
 
   fast-npm-meta@1.5.1: {}
 
-  fast-npm-meta@2.1.0: {}
+  fast-npm-meta@2.2.0:
+    dependencies:
+      cac: 7.0.0
 
   fast-string-truncated-width@1.2.1: {}
 
