@@ -164,7 +164,6 @@ marked.use({
   },
 })
 
-const LOCAL_NPMX_REDIRECT_PREFIX = '$npmx-local:'
 function withUserContentPrefix(value: string): string {
   return value.startsWith(USER_CONTENT_PREFIX) ? value : `${USER_CONTENT_PREFIX}${value}`
 }
@@ -175,10 +174,6 @@ function toUserContentId(value: string): string {
 
 function toUserContentHash(value: string): string {
   return `#${withUserContentPrefix(value)}`
-}
-
-function toLocalNpmxRedirect(path: string): string {
-  return `${LOCAL_NPMX_REDIRECT_PREFIX}${path}`
 }
 
 function isMarkdownFileUrl(url: string): boolean {
@@ -192,10 +187,7 @@ function isMarkdownFileUrl(url: string): boolean {
  * Otherwise, fall back to jsdelivr CDN (except for .md files which are left unchanged).
  */
 function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo): string {
-  if (!url) return url
-  if (url.startsWith(LOCAL_NPMX_REDIRECT_PREFIX)) {
-    return url.slice(LOCAL_NPMX_REDIRECT_PREFIX.length)
-  }
+  if (!url || url.startsWith('$')) return url
   if (url.startsWith('#')) {
     // Prefix anchor links to match heading IDs (avoids collision with page IDs)
     // Normalize markdown-style heading fragments to the same slug format used
@@ -228,7 +220,9 @@ function resolveUrl(url: string, packageName: string, repoInfo?: RepositoryInfo)
       if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
         // Redirect npmjs urls to ourself
         if (isNpmJsUrlThatCanBeRedirected(parsed)) {
-          return toLocalNpmxRedirect(parsed.pathname + parsed.search + parsed.hash)
+          // Prefixed with $ so the sanitizing pass doesn't resolve the local route
+          // as a repository-root file (see mdKit sanitizer $ handling)
+          return '$' + parsed.pathname + parsed.search + parsed.hash
         }
         return url
       }

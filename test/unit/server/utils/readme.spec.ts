@@ -344,6 +344,16 @@ describe('Markdown File URL Resolution', () => {
       expect(result.html).toContain('href="/package/test-pkg"')
     })
 
+    it('keeps raw HTML block-level npmjs links local when repository info is available', async () => {
+      const repoInfo = createRepoInfo()
+      const markdown = `<a href="https://www.npmjs.com/package/test-pkg">Package</a>`
+      const result = await renderReadmeHtml(markdown, 'test-pkg', repoInfo)
+
+      // These links bypass renderer.link/createHtml, so only the sanitizer pass runs.
+      // They must still resolve to the local route and keep their href.
+      expect(result.html).toContain('href="/package/test-pkg"')
+    })
+
     it('keeps npmjs route roots local when repository info is available', async () => {
       const repoInfo = createRepoInfo()
       const markdown = [
