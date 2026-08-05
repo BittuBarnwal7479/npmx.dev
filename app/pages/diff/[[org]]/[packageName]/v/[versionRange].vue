@@ -256,7 +256,7 @@ useSeoMeta({
             :to-version="toVersion"
             :file="selectedFile"
           />
-          <div v-else class="flex items-center justify-center text-center p-8">
+          <div v-else class="min-h-[60vh] flex items-center justify-center text-center p-8">
             <div>
               <span class="i-lucide:file-text w-16 h-16 mx-auto text-fg-subtle/50 block mb-4" />
               <p class="text-fg-muted">{{ $t('compare.select_file_prompt') }}</p>
