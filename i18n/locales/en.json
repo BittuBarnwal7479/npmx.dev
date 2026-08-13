@@ -656,6 +656,7 @@
       "trusted_publisher_removed": "Trusted publishing removed",
       "provenance_added": "Provenance enabled",
       "provenance_removed": "Provenance removed",
+      "deprecated": "Deprecated",
       "chart": {
         "tab_aria_label": "Metric selection",
         "dependency_size": "Dependency Size",

@@ -1972,6 +1972,9 @@
             "provenance_removed": {
               "type": "string"
             },
+            "deprecated": {
+              "type": "string"
+            },
             "chart": {
               "type": "object",
               "properties": {
