@@ -154,6 +154,8 @@ if (!isBlogPostRoute.value) {
       {{ route.name === 'search' ? `${$t('search.title_packages')} - npmx` : message }}
     </NuxtRouteAnnouncer>
 
+    <NuxtAnnouncer />
+
     <div id="main-content" class="flex-1 flex flex-col">
       <NuxtPage />
     </div>
