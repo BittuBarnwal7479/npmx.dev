@@ -93,7 +93,7 @@ function getCodeUrl(version: string): string {
   return `/package-code/${props.packageName}/v/${version}/${props.file.path}`
 }
 
-const { toggleCodeContainer } = useCodeContainer()
+const { codeContainerFull, toggleCodeContainer } = useCodeContainer()
 
 const { announce } = useCommandPalette()
 
@@ -365,6 +365,7 @@ useCommandPaletteContextCommands(
             class="px-3 max-xl:hidden"
             classicon="i-lucide:unfold-horizontal [.container-full_&]:i-lucide:fold-horizontal"
             :aria-label="$t('code.toggle_container')"
+            :aria-pressed="codeContainerFull"
             @click="toggleCodeContainer()"
           />
         </TooltipApp>

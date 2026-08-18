@@ -143,7 +143,7 @@ useSeoMeta({
 })
 
 onPrehydrate(el => {
-  let settingsSaved = {}
+  let settingsSaved: { codeContainerFull?: boolean } = {}
   try {
     settingsSaved = JSON.parse(localStorage.getItem('npmx-settings') || '{}')
   } catch {
