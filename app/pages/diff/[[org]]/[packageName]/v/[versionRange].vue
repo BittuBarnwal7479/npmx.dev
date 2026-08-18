@@ -27,6 +27,7 @@ const fromVersion = computed(() => versionRange.value?.from ?? '')
 const toVersion = computed(() => versionRange.value?.to ?? '')
 
 const router = useRouter()
+const { codeContainerFull } = useCodeContainer()
 const { data: pkg } = usePackage(packageName)
 const { versions: commandPaletteVersions, ensureLoaded: ensureCommandPaletteVersionsLoaded } =
   useCommandPalettePackageVersions(packageName)
@@ -140,6 +141,20 @@ useSeoMeta({
   description: () =>
     `Compare changes between ${packageName.value} versions ${fromVersion.value} and ${toVersion.value}`,
 })
+
+onPrehydrate(el => {
+  let settingsSaved = {}
+  try {
+    settingsSaved = JSON.parse(localStorage.getItem('npmx-settings') || '{}')
+  } catch {
+    // Ignore invalid persisted settings.
+  }
+  const container = el.querySelector('#diff-page-container')
+
+  if (settingsSaved?.codeContainerFull === true && container) {
+    container.classList.add('container-full')
+  }
+})
 </script>
 
 <template>
@@ -184,7 +199,9 @@ useSeoMeta({
     <!-- Comparison content -->
     <div
       v-else-if="compare"
-      class="w-full container flex-1 min-h-0 grid grid-cols-[18rem_1fr] max-lg:grid-cols-[16rem_1fr] max-md:grid-cols-[1fr] border-border border-x px-0 mx-auto"
+      id="diff-page-container"
+      class="w-full container flex-1 min-h-0 grid grid-cols-[18rem_1fr] max-lg:grid-cols-[16rem_1fr] max-md:grid-cols-[1fr] border-border border-x px-0 mx-auto transition-[max-width] duration-300"
+      :class="codeContainerFull ? 'container-full' : ''"
       dir="ltr"
     >
       <!-- Desktop sidebar -->
@@ -286,3 +303,9 @@ useSeoMeta({
     </ClientOnly>
   </main>
 </template>
+
+<style>
+.container-full.container-full {
+  @apply max-w-full border-0;
+}
+</style>
