@@ -17,6 +17,7 @@ import('vue-data-ui/style.css')
 const props = defineProps<{
   packageName: string
   inModal?: boolean
+  hideControls?: boolean
 }>()
 
 const { accentColors, selectedAccentColor } = useAccentColor()
@@ -154,6 +155,16 @@ const hasMinimap = computed<boolean>(() => {
   return series.length > 6
 })
 
+const chartHeight = computed(() => {
+  if (isMobile.value) {
+    return 950
+  }
+  if (props.hideControls) {
+    return 420
+  }
+  return hasMinimap.value ? 500 : 611
+})
+
 const chartConfig = computed<VueUiXyConfig>(() => {
   return {
     theme: isDarkMode.value ? 'dark' : '',
@@ -169,10 +180,10 @@ const chartConfig = computed<VueUiXyConfig>(() => {
     chart: {
       title: {
         text: dateRangeLabel.value,
-        fontSize: isMobile.value ? 24 : 16,
+        fontSize: 16,
         bold: false,
       },
-      height: isMobile.value ? 750 : hasMinimap.value ? 500 : 611,
+      height: chartHeight.value,
       backgroundColor: colors.value.bg,
       padding: {
         top: 24,
@@ -311,9 +322,9 @@ const chartConfig = computed<VueUiXyConfig>(() => {
         },
       },
       zoom: {
-        maxWidth: isMobile.value ? 350 : 500,
+        show: !props.hideControls,
+        autoFit: true,
         highlightColor: colors.value.bgElevated,
-        useResetSlot: true,
         minimap: {
           show: true,
           lineColor: '#FAFAFA',
@@ -342,7 +353,7 @@ const chartConfig = computed<VueUiXyConfig>(() => {
     id="version-distribution"
     :aria-busy="pending ? 'true' : 'false'"
   >
-    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-end mb-6">
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-end mb-6" v-if="!hideControls">
       <div class="flex flex-col gap-1">
         <label class="text-3xs font-mono text-fg-subtle tracking-wide uppercase">
           {{ $t('package.versions.distribution_title') }}
@@ -447,7 +458,7 @@ const chartConfig = computed<VueUiXyConfig>(() => {
       role="region"
       aria-labelledby="version-distribution-title"
       class="relative"
-      :class="isMobile ? 'min-h-[260px]' : 'min-h-[520px]'"
+      :style="{ minHeight: chartHeight }"
     >
       <!-- Chart content -->
       <ClientOnly v-if="xyDataset.length > 0 && !error">
@@ -507,13 +518,13 @@ const chartConfig = computed<VueUiXyConfig>(() => {
             <template #legend="{ legend }">
               <div class="flex gap-4 flex-wrap justify-center pt-8">
                 <template v-if="legend.length > 0">
-                  <div class="flex gap-1 place-items-center">
-                    <div class="h-3 w-3">
+                  <div class="flex gap-1 shrink-0 items-center whitespace-nowrap">
+                    <div class="h-3 w-3 shrink-0">
                       <svg viewBox="0 0 2 2" class="w-full">
                         <rect x="0" y="0" width="2" height="2" rx="0.3" :fill="legend[0]?.color" />
                       </svg>
                     </div>
-                    <span>
+                    <span class="shrink-0 whitespace-nowrap">
                       {{ legend[0]?.name }}
                     </span>
                   </div>
@@ -526,7 +537,7 @@ const chartConfig = computed<VueUiXyConfig>(() => {
               <button
                 type="button"
                 aria-label="reset minimap"
-                class="absolute inset-is-1/2 -translate-x-1/2 -bottom-18 sm:inset-is-unset sm:translate-x-0 sm:bottom-auto sm:-inset-ie-20 sm:-top-3 flex items-center justify-center px-2.5 py-1.75 border border-transparent rounded-md text-fg-subtle hover:text-fg transition-colors hover:border-border focus-visible:outline-accent/70 sm:mb-0"
+                class="absolute inset-is-1/2 -translate-x-1/2 -bottom-18 sm:inset-is-unset sm:translate-x-0 sm:bottom-auto sm:-inset-ie-16 sm:-top-3 flex items-center justify-center px-2.5 py-1.75 border border-transparent rounded-md text-fg-subtle hover:text-fg transition-colors hover:border-border focus-visible:outline-accent/70 sm:mb-0"
                 style="pointer-events: all !important"
                 @click="resetMinimap"
               >
