@@ -176,10 +176,6 @@ function toUserContentHash(value: string): string {
   return `#${withUserContentPrefix(value)}`
 }
 
-function isMarkdownFileUrl(url: string): boolean {
-  return /\.(?:md|markdown)$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
-}
-
 /**
  * Resolve a relative URL to an absolute URL.
  * If repository info is available, resolve to provider's raw file URLs.

@@ -216,6 +216,10 @@ export function getHeadingSlugSource(text: string): string {
   return stripHtmlTags(text).trim()
 }
 
+function isMarkdownFileUrl(url: string): boolean {
+  return /\.(?:md|markdown)$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
+}
+
 const htmlAnchorRe = /<a(\s[^>]*?)href=(["'])([^"']*)\2([^>]*)>([\s\S]*?)<\/a>/gi
 const anchorTokenOpenRe = /^<a(?:\s.+)?\/?>$/is
 const anchorTokenCloseRe = /^<\/a>$/i
