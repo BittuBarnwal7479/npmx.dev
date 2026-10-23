@@ -3,6 +3,7 @@ import {
   type ProcessLinkFn,
   blockquote,
   createCodeHighlighter,
+  isMarkdownFileUrl,
   isNpmJsUrlThatCanBeRedirected,
   createLink,
   createHeading,

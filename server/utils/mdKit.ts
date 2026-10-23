@@ -216,7 +216,7 @@ export function getHeadingSlugSource(text: string): string {
   return stripHtmlTags(text).trim()
 }
 
-function isMarkdownFileUrl(url: string): boolean {
+export function isMarkdownFileUrl(url: string): boolean {
   return /\.(?:md|markdown)$/i.test(url.split('?')[0]?.split('#')[0] ?? '')
 }
 
