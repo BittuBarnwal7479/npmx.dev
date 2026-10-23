@@ -217,7 +217,7 @@ export function getHeadingSlugSource(text: string): string {
 }
 
 const htmlAnchorRe = /<a(\s[^>]*?)href=(["'])([^"']*)\2([^>]*)>([\s\S]*?)<\/a>/gi
-const anchorTokenOpenRe = /^<a(?:\s.+)?\/?>$/i
+const anchorTokenOpenRe = /^<a(?:\s.+)?\/?>$/is
 const anchorTokenCloseRe = /^<\/a>$/i
 
 export type ToUserContentIdFn = (id: string) => string
