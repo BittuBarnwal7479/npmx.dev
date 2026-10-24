@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('useSettings - keyboardShortcuts', () => {
   beforeEach(() => {
@@ -78,6 +78,11 @@ describe('useSettings - codeLigatures', () => {
 describe('useSettings - resetSettings', () => {
   beforeEach(() => {
     vi.resetModules()
+  })
+
+  // Persisted settings (e.g. selectedLocale) would leak into other test files
+  afterEach(() => {
+    localStorage.clear()
   })
 
   it('restores defaults and keeps the selected locale', async () => {
