@@ -111,11 +111,13 @@ describe('useSettings - resetSettings', () => {
     document.documentElement.style.setProperty('--accent-color', 'var(--swatch-coral)')
     document.documentElement.dataset.bgTheme = 'slate'
     document.documentElement.dataset.fgTheme = 'contrast'
+    document.documentElement.dataset.collapsed = 'readme'
 
     resetSettings()
 
     expect(document.documentElement.style.getPropertyValue('--accent-color')).toBe('')
     expect(document.documentElement.dataset.bgTheme).toBeUndefined()
     expect(document.documentElement.dataset.fgTheme).toBeUndefined()
+    expect(document.documentElement.dataset.collapsed).toBeUndefined()
   })
 })

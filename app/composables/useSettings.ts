@@ -141,6 +141,7 @@ function resetSettings() {
     document.documentElement.style.removeProperty('--accent-color')
     document.documentElement.removeAttribute('data-bg-theme')
     document.documentElement.removeAttribute('data-fg-theme')
+    document.documentElement.removeAttribute('data-collapsed')
   }
 }
 
