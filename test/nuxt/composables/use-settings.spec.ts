@@ -74,3 +74,43 @@ describe('useSettings - codeLigatures', () => {
     })
   })
 })
+
+describe('useSettings - resetSettings', () => {
+  beforeEach(() => {
+    vi.resetModules()
+  })
+
+  it('restores defaults and keeps the selected locale', async () => {
+    const { useSettings } = await import('~/composables/useSettings')
+    const { settings, resetSettings } = useSettings()
+
+    settings.value.relativeDates = true
+    settings.value.keyboardShortcuts = false
+    settings.value.accentColorId = 'coral'
+    settings.value.sidebar.collapsed = ['readme']
+    settings.value.selectedLocale = 'fr-FR'
+
+    resetSettings()
+
+    expect(settings.value.relativeDates).toBe(false)
+    expect(settings.value.keyboardShortcuts).toBe(true)
+    expect(settings.value.accentColorId).toBeNull()
+    expect(settings.value.sidebar.collapsed).toEqual([])
+    expect(settings.value.selectedLocale).toBe('fr-FR')
+  })
+
+  it('clears theme attributes from the document', async () => {
+    const { useSettings } = await import('~/composables/useSettings')
+    const { resetSettings } = useSettings()
+
+    document.documentElement.style.setProperty('--accent-color', 'var(--swatch-coral)')
+    document.documentElement.dataset.bgTheme = 'slate'
+    document.documentElement.dataset.fgTheme = 'contrast'
+
+    resetSettings()
+
+    expect(document.documentElement.style.getPropertyValue('--accent-color')).toBe('')
+    expect(document.documentElement.dataset.bgTheme).toBeUndefined()
+    expect(document.documentElement.dataset.fgTheme).toBeUndefined()
+  })
+})
